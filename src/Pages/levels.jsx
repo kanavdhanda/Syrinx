@@ -2,7 +2,7 @@ import GdLoader from "../Components/gdLoader"
 import { games } from "../Config/gdConfig"
 import { useState } from 'react'; 
 
-export default function Level1(){
+export default function Levels(){
 
     const [isPaused, setIsPaused] = useState(false);
 
