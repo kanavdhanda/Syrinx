@@ -12,7 +12,7 @@ export default function Levels(){
         <>
         {games.map((game, index) => {
             return(
-                <div className="flex flex-col items-center justify-center"key={index}>
+                <div className="flex flex-col items-center justify-center text-black" key={index}>
                     <button onClick={()=>{levelClick(index)}}>Level : {index+1}</button>
                 </div>
             )
