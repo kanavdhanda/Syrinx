@@ -10,8 +10,10 @@ export default function Login(){
 
     const handleSubmit = (e) => {  
         e.preventDefault();
-        const data = new FormData(e.target);
-        console.log(data.get("username"));
+
+        console.log(formData.get("Username"));
+        console.log(formData.get("Password"));
+
      }
      const handleChange= (e)=>{
         const {name, value} = e.target;
@@ -26,7 +28,6 @@ export default function Login(){
             <form onSubmit={handleSubmit} className="flex items-center justify-center flex-col">
                 <input name="Username" type="text" value={username} onChange={handleChange}></input>
                 <input name="Password" type="password" value={password} onChange={handleChange} ></input>
-
             </form>
         </div>
         </>
