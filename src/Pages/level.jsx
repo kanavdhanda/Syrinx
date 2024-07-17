@@ -9,7 +9,7 @@ export default function Level() {
     <div className="relative w-full h-full">
          {/* Change the text to button and style it */}
       <button
-        className="absolute inset-0"
+        className="absolute inset-0 bg-red-300 p-10"
         onClick={() => setIsPaused(!isPaused)}
       >
         Pause
