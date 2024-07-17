@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <PlayGame/>
+    <PlayGame  />
     </>
   )
 }
