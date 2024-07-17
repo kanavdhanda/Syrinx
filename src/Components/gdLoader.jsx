@@ -1,5 +1,5 @@
 import {useEffect , useRef} from 'react';
-import './godot.css'
+// import './godot.css'
 
 export default function GdLoader(props){
 
