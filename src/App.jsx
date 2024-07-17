@@ -1,5 +1,4 @@
 
-import Login from "./Pages/Login"
 import PlayGame from "./Pages/PlayGame"
 
 
