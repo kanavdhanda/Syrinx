@@ -1,0 +1,38 @@
+.members-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    background-color: #000; /* Optional: to match the background of the image */
+  }
+.members-container :nth-child(1){
+    margin-top: 15vh;
+}
+.members-container :nth-child(4){
+    margin-top: 15vh;
+}
+
+  
+  .member {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .member-image {
+    width: 100px;
+    height: auto;
+  }
+  
+  .member-info {
+    margin-top: 10px;
+  }
+  
+  .member-name {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .member-role {
+    font-size: 1em;
+  }
+  

@@ -23,28 +23,9 @@ export default function Leaderboard() {
         dataLao();
     },[])
   return (
-    <div>
+    <div className="flex justify-center items-center w-full h-[80vh]">
       <h1>Leaderboard</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                {leaderboard.map((user, index) => {
-                    return(
-                        <tr key={index}>
-                            <td>{index+1}</td>
-                            <td>{user.name}</td>
-                            <td>{user.score}</td>
-                        </tr>
-                    )
-                })}
-            </tbody>
-            </table>
+
     </div>
   );
 }

@@ -13,6 +13,7 @@ const menuItems = [
 ];
 
 export default function Home() {
+  
   const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
 
@@ -35,15 +36,14 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <div className="flex flex-col items-center justify-center bg-black w-full h-[80vh] text-white">
         <img src={text} alt="" />
         <div className="flex items-center space-y-4 text-xl">
           <div className="">
             {menuItems.map((item, index) => (
-              <div key={item.name} className="flex items-center space-x-2">
+              <div key={item.name} className="flex items-center space-x-2 text-3xl mb-2">
                 {selectedIndex === index && (
-                  <img src={logo} alt="SX Logo" className="h-6 w-6" />
+                  <img src={logo} alt="SX Logo" className="h-10 w-10" />
                 )}
                 <Link to={item.path} className={selectedIndex === index ? "text-blue-500" : ""}>
                   {item.name}
@@ -52,7 +52,7 @@ export default function Home() {
             ))}
           </div>
           <div className="ml-10">
-            <img src={char} alt="" />
+            <img src={char} alt="" className="h-64" />
           </div>
         </div>
         <div className="flex items-center justify-center mt-12 text-center text-sm">

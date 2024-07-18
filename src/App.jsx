@@ -8,6 +8,7 @@ import Home from "./Pages/Home"
 import PrivateRoute from "./utils/auth"
 import Rulebook from "./Pages/Rulebook"
 import Members from "./Pages/Members"
+import Navbar from "./Components/Navbar"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   // TODO: Revert back Auth.js to original code(remove always true part)
   return (
     <>
+    <Navbar />
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
