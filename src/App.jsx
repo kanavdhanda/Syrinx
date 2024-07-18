@@ -25,7 +25,7 @@ function App() {
           <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />
           
 
-          <Route path="/lvls/:id" element={<PrivateRoute><Navbar /><Level /></PrivateRoute>} />
+          <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
           <Route path="/leaderboard" element={<PrivateRoute><Navbar /><Leaderboard /></PrivateRoute>} />
           <Route path="/rulebook" element={<PrivateRoute><Navbar /><Rulebook /></PrivateRoute>}></Route>
           <Route path="/members" element={<PrivateRoute><Navbar /><Members /></PrivateRoute>}></Route>
