@@ -41,9 +41,9 @@ export default function Home() {
         <div className="flex items-center space-y-4 text-xl">
           <div className="">
             {menuItems.map((item, index) => (
-              <div key={item.name} className="flex items-center space-x-2 text-3xl mb-2">
+              <div key={item.name} className="flex items-center space-x-2 text-3xl mb-4">
                 {selectedIndex === index && (
-                  <img src={logo} alt="SX Logo" className="h-10 w-10" />
+                  <img src={logo} alt="SX Logo" className="h-10 w-auto" />
                 )}
                 <Link to={item.path} className={selectedIndex === index ? "text-blue-500" : ""}>
                   {item.name}
