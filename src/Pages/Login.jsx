@@ -1,16 +1,36 @@
 import { useState } from "react";
+import axios from 'axios';
 
 export default function Login() {
     const [formData, setFormData] = useState({
         Username: '',
         Password: '',
     });
+    const [error, setError] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(formData.Username);
         console.log(formData.Password);
     };
+
+        try {
+            const response = await axios.post('https://localhost:8080/login', {
+                username: formData.Username,
+                password: formData.Password
+            });
+
+            if (response.data.token) {
+                localStorage.setItem('token', response.data.SessionID);
+                console.log('Login successful!');
+            } else {
+                setError('Invalid credentials');
+            }
+        } catch (err) {
+            console.error('Login error:', err);
+            setError('Login failed. Please try again.');
+        }
+    }
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -18,7 +38,7 @@ export default function Login() {
             ...formData,
             [name]: value,
         });
-    };
+    }
 
     return (
         <>
