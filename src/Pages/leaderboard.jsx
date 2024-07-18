@@ -25,7 +25,15 @@ export default function Leaderboard() {
   return (
     <div className="flex justify-center items-center w-full h-[80vh]">
       <h1>Leaderboard</h1>
-
+      {leaderboard.map((team, index) => {
+                    return(
+                        <tr key={index}>
+                            <td>{index+1}</td>
+                            <td>{team.name}</td>
+                            <td>{team.score}</td>
+                        </tr>
+                    )
+                })}
     </div>
   );
 }
