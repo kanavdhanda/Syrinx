@@ -1,7 +1,7 @@
-import React from 'react'
+
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png'
-
+import Cookies from 'js-cookie'
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -9,7 +9,7 @@ const Navbar = () => {
         // Remove the token from local storage
         Cookies.remove('token');
         // Redirect to the login page
-        navigate('/login');
+        navigate('/');
     };
   return (
     <div className='flex  justify-between py-10 px-20 h-20  text-red-100'>

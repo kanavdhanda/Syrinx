@@ -16,8 +16,9 @@ function App() {
   // TODO: Revert back Auth.js to original code(remove always true part)
   return (
     <>
-    <Navbar />
-      <Router>
+        <Router>
+        <Navbar />
+
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
