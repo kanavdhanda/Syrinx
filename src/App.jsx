@@ -5,12 +5,12 @@ import Levels from "./Pages/levels"
 import Level from "./Pages/level"
 import Leaderboard from "./Pages/leaderboard"
 import Home from "./Pages/Home"
-import PrivateRoute from "./Config/authConfig"
+import PrivateRoute from "./utils/auth"
 
 function App() {
 
 
-  
+  // TODO: Revert back Auth.js to original code(remove always true part)
   return (
     <>
       <Router>

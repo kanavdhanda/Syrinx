@@ -10,6 +10,8 @@ const games = [
         gdextensionLibs: [],
         serviceWorker: "Game.service.worker.js",
         packfile: "Game",
+        wasmFile: `/${GODOT_CONFIG.executable}.wasm?cache-bust=${new Date().getTime()}`,     //replace with link to pck file
+        mainPack: `/${GODOT_CONFIG.executable}.pck?cache-bust=${new Date().getTime()}`,    //replace with link to main file
       },
   ];
   

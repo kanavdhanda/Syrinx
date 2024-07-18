@@ -1,6 +1,7 @@
 import  { useState } from "react";
 import GdLoader from "../Components/gdLoader";
 import { useParams } from "react-router-dom";
+import { games } from "../Config/gdConfig";
 export default function Level() {
   let { id } = useParams();
   let gameId = parseInt(id, 10);
@@ -29,7 +30,7 @@ export default function Level() {
           </>
         )}
       </div>
-      <GdLoader gdConfig={gameId} />
+      <GdLoader gdConfig={games[gameId]} />
     </div>
   );
 }
