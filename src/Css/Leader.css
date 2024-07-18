@@ -1,0 +1,32 @@
+table {
+    border-collapse: collapse;
+    color: white;
+  }
+  
+  th, td {
+    padding: 0px 70px;
+  }
+  
+  th {
+    font-size: 29px;
+    padding-bottom: 10px;
+  }
+  
+  td {
+    
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  tr:nth-child(1) {
+    color: yellow;
+  }
+  
+  tr:nth-child(2) {
+    color: lightgreen;
+  }
+  
+  tr:nth-child(3) {
+    color: darkgreen;
+  }
