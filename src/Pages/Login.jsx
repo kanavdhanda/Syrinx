@@ -12,7 +12,7 @@ export default function Login() {
         e.preventDefault();
         console.log(formData.Username);
         console.log(formData.Password);
-    };
+    
 
         try {
             const response = await axios.post('https://localhost:8080/login', {
@@ -30,7 +30,7 @@ export default function Login() {
             console.error('Login error:', err);
             setError('Login failed. Please try again.');
         }
-    
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
