@@ -41,17 +41,17 @@ export default function Leaderboard() {
     
     <div className="flex flex-col items-center w-full h-[100vh]">
       <h1 className="text-5xl mb-5">Leaderboard</h1>
-      <h1 className="ml-16 mt-8">TEAM 1</h1>
-      <h1 className="mt-12 mr-[380px]">TEAM 2</h1>
-      <h1 className="mt-9 ml-[400px]">TEAM 3</h1>
+      <h1 className="ml-16 mt-8 text-2xl">TEAM 1</h1>
+      <h1 className="mt-10 mr-[380px] text-2xl">TEAM 2</h1>
+      <h1 className="mt-6 ml-[400px] text-2xl">TEAM 3</h1>
       <img src={leader} alt="" className="h-[220px] absolute mt-[80px]" />
 
 
       <div className=" mt-20">
-      <table>
+      <table >
         <thead>
-          <tr>
-            <th>RANK</th>
+          <tr >
+            <th className="mr-20">RANK</th>
             <th>TEAM NAME</th>
             <th>SCORE</th>
           </tr>
