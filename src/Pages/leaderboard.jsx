@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
+
 export default function Leaderboard() {
     const [leaderboard , setLeaderboard] = useState([]);    
     const dataLao = async () => {
-        try{
-            const response = await fetch("https:localhost:8080/leaderboard");
-        const data = await response.json();
+        try {
+            const response = await axios.get("https://localhost:8080/leaderboard");
+            
+            if (response.status !== 200) {
+                throw new Error("Something went wrong");
+            }
 
-        setLeaderboard(data);
-        if(!response.ok){
-            throw new Error("Something went wrong");
-        
-        }
-        if(response.ok){
+            setLeaderboard(response.data);
             console.log("Data fetched successfully");
-        }}
-        catch(e){
-            console.log(e);
+        } catch (e) {
+            console.error("Error fetching data:", e);
+
         }
     }
+
     useEffect(()=>{
         dataLao();
     },[])

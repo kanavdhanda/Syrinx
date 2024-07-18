@@ -5,6 +5,8 @@ import Levels from "./Pages/levels"
 import Level from "./Pages/level"
 import Leaderboard from "./Pages/leaderboard"
 import Home from "./Pages/Home"
+import PrivateRoute from "./Config/authConfig"
+
 function App() {
 
   const isAuthenticated = true;
@@ -14,11 +16,12 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home" element={isAuthenticated?<Home />:<Login />} />
+          <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route path="/lvls" element={<PrivateRoute><Levels /></PrivateRoute>} />
+          
 
-          <Route path="/lvls" element={isAuthenticated? <Levels/>:<Login />} />
-          <Route path="/lvls/:id" element={isAuthenticated? <Level/>:<Login />} />
-          <Route path="/leaderboard" element={isAuthenticated? <Leaderboard/>:<Login />} />
+          <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
+          <Route path="/leaderboard" element={<PrivateRoute><Leaderboard /></PrivateRoute>} />
           <Route path="*" element={<h1>Not Found</h1>} />
 
           
