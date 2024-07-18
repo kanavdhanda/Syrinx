@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 export default function Login() {
     const [formData, setFormData] = useState({
@@ -21,7 +22,11 @@ export default function Login() {
             });
 
             if (response.data.token) {
-                localStorage.setItem('token', response.data.SessionID);
+                Cookies.set('token', response.data.token, { 
+                    expires: 1, 
+                    secure: true, 
+                    sameSite: 'strict' 
+                });
                 console.log('Login successful!');
             } else {
                 setError('Invalid credentials');
