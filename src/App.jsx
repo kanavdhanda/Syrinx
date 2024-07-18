@@ -15,7 +15,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Login />} />x
           <Route path="/home" element={<Home />} />
 
           <Route path="/lvls" element={isAuthenticated? <Levels/>:<Login />} />
