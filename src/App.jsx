@@ -9,7 +9,7 @@ import PrivateRoute from "./Config/authConfig"
 
 function App() {
 
-  const isAuthenticated = true;
+
   
   return (
     <>
