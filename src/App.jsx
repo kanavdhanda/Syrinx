@@ -17,7 +17,7 @@ function App() {
   return (
     <>
         <Router>
-        <Navbar />
+        {<Navbar /> && <PrivateRoute />}
 
         <Routes>
           <Route path="/" element={<Login />} />
