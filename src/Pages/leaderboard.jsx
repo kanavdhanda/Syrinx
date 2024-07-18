@@ -53,7 +53,7 @@ export default function Leaderboard() {
       <img src={leader} alt="" className="h-[250px] absolute mt-[80px]" />
 
 
-      <div className=" mt-20 border-2 px-5 min-h-[230px] overflow-y-auto">
+      <div className=" mt-16 border-2 px-5 min-h-[230px] overflow-y-auto">
       <table >
         <thead>
           <tr >
