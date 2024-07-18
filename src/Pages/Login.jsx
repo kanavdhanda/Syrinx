@@ -30,7 +30,7 @@ export default function Login() {
             console.error('Login error:', err);
             setError('Login failed. Please try again.');
         }
-    }
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
