@@ -17,3 +17,7 @@
    ::-webkit-scrollbar {
      width: 0px;}
 
+     .home_page_grid {
+      display: grid;
+      grid-template-columns: 0.49fr 1fr;
+    }

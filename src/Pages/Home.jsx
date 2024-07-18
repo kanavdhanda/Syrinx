@@ -16,15 +16,15 @@ export default function Home() {
   
   const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
+  const [hoverIndex, setHoveredIndex] = useState(0);
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowUp") {
-      setSelectedIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : menuItems.length - 1));
+      setHoveredIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : menuItems.length - 1));
     } else if (e.key === "ArrowDown") {
-      setSelectedIndex((prevIndex) => (prevIndex < menuItems.length - 1 ? prevIndex + 1 : 0));
+      setHoveredIndex((prevIndex) => (prevIndex < menuItems.length - 1 ? prevIndex + 1 : 0));
     } else if (e.key === "Enter") {
-      navigate(menuItems[selectedIndex].path);
-    }
+      navigate(menuItems[hoverIndex].path);}
   };
 
   useEffect(() => {
@@ -32,23 +32,26 @@ export default function Home() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selectedIndex]);
+  }, [hoverIndex]);
+  
 
   return (
     <>
       <div className="flex flex-col items-center justify-center bg-black w-full h-[65vh] text-white">
         <img src={text} alt="" className="mb-10" />
         <div className="flex items-center space-y-4 text-xl">
-          <div className="">
+          <div className="home_page_grid">
             {menuItems.map((item, index) => (
-              <div key={item.name} className="flex items-center space-x-2 text-3xl mb-4">
-                {selectedIndex === index && (
-                  <img src={logo} alt="SX Logo" className="h-10 w-auto" />
-                )}
-                <Link to={item.path} className={selectedIndex === index ? "text-blue-500" : ""}>
+              <>
+              <img src={logo} alt="SX Logo" className={`${hoverIndex === index ? 'opacity-1' : 'opacity-0'} h-10 w-24'`} />
+              <div key={item.name} className="space-x-2 text-3xl mb-4" onMouseEnter={() => setHoveredIndex(index)}
+                >
+                {hoverIndex === index}
+                <Link to={item.path} className= {hoverIndex == index ? "text-blue-500":'text-white'}>
                   {item.name}
                 </Link>
               </div>
+              </>
             ))}
           </div>
           <div className="ml-10">
