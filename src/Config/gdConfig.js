@@ -1,3 +1,6 @@
+const GODOT_CONFIG = {
+}
+
 const games = [
     {
         name: "Game Instance 1",

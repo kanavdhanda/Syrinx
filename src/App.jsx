@@ -6,6 +6,8 @@ import Level from "./Pages/level"
 import Leaderboard from "./Pages/leaderboard"
 import Home from "./Pages/Home"
 import PrivateRoute from "./utils/auth"
+import Rulebook from "./Pages/Rulebook"
+import Members from "./Pages/Members"
 
 function App() {
 
@@ -22,6 +24,9 @@ function App() {
 
           <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
           <Route path="/leaderboard" element={<PrivateRoute><Leaderboard /></PrivateRoute>} />
+          <Route path="/rulebook" element={<PrivateRoute><Rulebook /></PrivateRoute>}></Route>
+          <Route path="/members" element={<PrivateRoute><Members /></PrivateRoute>}></Route>
+
           <Route path="*" element={<h1>Not Found</h1>} />
 
           
