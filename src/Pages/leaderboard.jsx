@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import leader from "../assets/leader.png";
 
 export default function Leaderboard() {
     const [leaderboard , setLeaderboard] = useState([]);    
@@ -23,17 +24,10 @@ export default function Leaderboard() {
         dataLao();
     },[])
   return (
-    <div className="flex justify-center items-center w-full h-[80vh]">
-      <h1>Leaderboard</h1>
-      {leaderboard.map((team, index) => {
-                    return(
-                        <tr key={index}>
-                            <td>{index+1}</td>
-                            <td>{team.name}</td>
-                            <td>{team.score}</td>
-                        </tr>
-                    )
-                })}
+    <div className="flex flex-col items-center w-full h-[100vh]">
+      <h1 className="text-5xl mb-5">Leaderboard</h1>
+      <h1 className="ml-16 mt-8">TEAM 1</h1>
+      <img src={leader} alt="" className="h-[220px] absolute mt-[80px]" />
     </div>
   );
 }
