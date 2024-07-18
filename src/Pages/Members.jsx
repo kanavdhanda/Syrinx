@@ -15,7 +15,7 @@ const Members = () => {
     <>
     <div className="flex flex-col w-full items-center justify-center ">
     <img src={text} alt="" className='w-[600px]' />
-    <div className=" text-4xl mt-20">Members</div>
+    <div className=" text-4xl mt-10">Members</div>
     </div>
     <div className="members-container">
       {members.map((member, index) => (

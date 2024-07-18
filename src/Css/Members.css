@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 40vh;
+    height: 30vh;
     background-color: #000; /* Optional: to match the background of the image */
   }
 .members-container :nth-child(1){

@@ -48,7 +48,7 @@ export default function Login() {
 
     return (
         <>
-            <div className="flex flex-col min-w-full h-[100vh] items-center justify-center">
+            <div className="flex flex-col min-w-full h-[70vh] items-center justify-center">
             {/* <img src={logo} alt="" className="w-40" /> */}
                 <form onSubmit={handleSubmit} className="flex flex-col items-center p-6 bg-white rounded-lg shadow-lg">
                     <h1 className="mb-6 text-2xl font-bold text-gray-800">Login</h1>
