@@ -6,10 +6,10 @@ import char3 from '../assets/char3.png';
 import text from '../assets/text.png';
 
 const members = [
-  { img: char1, name: 'Aayush Goyal',discID:'Web Developer' },
-  { img: char2, name: 'Aayush Goyal', discID:'Web Developer' },
-  { img: char3, name: 'Aayush Goyal', discID:'Web Developer' },
-  { img: char1, name: 'Aayush Goyal', discID:'Web Developer' },
+  { img: char1, name: 'John doe',discID:'Web Developer' },
+  { img: char2, name: 'John doe', discID:'Web Developer' },
+  { img: char3, name: 'John doe', discID:'Web Developer' },
+  { img: char1, name: 'John doe', discID:'Web Developer' },
 ];
 
 const Members = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import scroll from '../assets/scroll2.png'
 
-const rulebook = ["1. The game will be played in a 5v5 format.","aslkdmalsdmaldlalasmdlaksmdsaldmska"]
+const rulebook = ["1. The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.The game will be played in a 5v5 format.","aslkdmalsdmaldlalasmdlaksmdsaldmska"]
 
 const Rulebook = () => {
   return (
