@@ -37,6 +37,29 @@ export default function Leaderboard() {
         { rank: 6, name: 'TEAM1', score: 750 },
         { rank: 6, name: 'TEAM1', score: 750 },
         { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
+        { rank: 7, name: 'TEAM2', score: 690 },
         { rank: 8, name: 'TEAM3', score: 620 },
         { rank: 9, name: 'TEAM4', score: 530 },
       ];
@@ -50,10 +73,10 @@ export default function Leaderboard() {
       <h1 className="ml-16 mt-8 text-2xl">TEAM 1</h1>
       <h1 className="mt-14 mr-[400px] text-2xl">TEAM 2</h1>
       <h1 className="mt-8 ml-[420px] text-2xl">TEAM 3</h1>
-      <img src={leader} alt="" className="h-[250px] absolute mt-[80px] w-[900px]" />
+      <img src={leader} alt="" className="h-[250px] absolute mt-[80px] w-[750px]" />
 
 
-      <div className=" mt-16 border-2 px-5 min-h-[230px] overflow-y-auto">
+      <div className=" mt-28 bg-[#1f1e1e] py-5 rounded-xl px-5 flex justify-center w-[900px]">
       <table >
         <thead>
           <tr >
