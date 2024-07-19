@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center bg-black w-full h-[75vh] text-white">
+      <div className="flex flex-col items-center justify-center bg-black w-full h-[85vh] text-white">
         <img src={text} alt="" className="mb-10" />
         <div className="flex items-center space-y-4 text-xl">
           <div className="home_page_grid">
@@ -58,7 +58,7 @@ export default function Home() {
             <img src={char} alt="" className="h-64" />
           </div>
         </div>
-        <div className="flex items-center justify-center mt-12 text-center text-sm">
+        <div className="flex items-center justify-center mt-24 text-center text-xl">
           <div>
             <p>CCS@2024</p>
             <p>CREATIVE COMPUTING INDUSTRY</p>

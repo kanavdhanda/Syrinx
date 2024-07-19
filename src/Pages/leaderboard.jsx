@@ -50,7 +50,7 @@ export default function Leaderboard() {
       <h1 className="ml-16 mt-8 text-2xl">TEAM 1</h1>
       <h1 className="mt-14 mr-[400px] text-2xl">TEAM 2</h1>
       <h1 className="mt-8 ml-[420px] text-2xl">TEAM 3</h1>
-      <img src={leader} alt="" className="h-[250px] absolute mt-[80px]" />
+      <img src={leader} alt="" className="h-[250px] absolute mt-[80px] w-[900px]" />
 
 
       <div className=" mt-16 border-2 px-5 min-h-[230px] overflow-y-auto">
