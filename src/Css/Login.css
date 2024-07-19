@@ -61,7 +61,7 @@
   
   #submit_btn:active::before,
   #submit_btn:active::after {
-    border-color: #3b82f6;
+    border-color:#3b82f6;
   }
   
   #submit_btn::before,
