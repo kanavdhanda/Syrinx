@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import GdLoader from "../Components/gdLoader";
+import GdLoader from "../godot/gdLoader";
 import { useParams } from "react-router-dom";
 import { games } from "../Config/gdConfig";
 export default function Level() {
@@ -24,7 +24,7 @@ export default function Level() {
         {/* Down below you will need to write code for the Pause screen */}
         {isPaused && (
           <>
-            <div className="flex items-center justify-center h-full">
+            <div className="flex items-center justify-center h-full z-50 ">
               <h1 className="text-4xl text-white">Game Paused</h1>
             </div>
           </>

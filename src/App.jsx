@@ -20,12 +20,9 @@ function App() {
         <Router>
           
         <Routes>
-
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<PrivateRoute><Navbar /><Home /></PrivateRoute>} />
-          <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />
-          
-
+          <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
           <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
           <Route path="/leaderboard" element={<PrivateRoute><Navbar /><Leaderboard /></PrivateRoute>} />
           <Route path="/rulebook" element={<PrivateRoute><Navbar /><Rulebook /></PrivateRoute>}></Route>
