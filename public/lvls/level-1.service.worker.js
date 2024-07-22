@@ -6,9 +6,8 @@
 const CACHE_VERSION = "1721591653|58798387";
 const CACHE_PREFIX = "Game-sw-cache-";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
-const OFFLINE_URL = "level-1.offline.html";
 // Files that will be cached on load.
-const CACHED_FILES = ["level-1.html","level-1.js","level-1.offline.html","level-1.worker.js","level-1.audio.worklet.js"];
+const CACHED_FILES = ["level-1.js","level-1.worker.js","level-1.audio.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 const CACHABLE_FILES = ["level-1.wasm","level-1.pck","level-1.side.wasm"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
