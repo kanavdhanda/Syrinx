@@ -1,13 +1,23 @@
 {
-    "version": 2,
-    "builds": [
+    "rewrites": [
       {
-        "src": "package.json",
-        "use": "@vercel/node",
-        "config": { "includeFiles": ["dist/**"] }
+        "source": "/level-1/:path*",
+        "destination": "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/:path*"
       }
     ],
-    "routes": [
-      { "src": "/(.*)", "dest": "server.mjs" }
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "Cross-Origin-Embedder-Policy",
+            "value": "require-corp"
+          },
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin"
+          }
+        ]
+      }
     ]
   }
