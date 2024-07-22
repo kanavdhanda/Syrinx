@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/level-1/:path*",
-        "destination": "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/:path*"
+        "destination": "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-1/:path*"
       },
       {
         "source": "/(.*)",
