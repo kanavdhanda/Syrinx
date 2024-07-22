@@ -1,22 +1,33 @@
-const GODOT_CONFIG = {
-}
+// const GODOT_CONFIG = {
+//     executable: "syrinx-test-build",
+// }
 
 const games = [
-    {
-        name: "Game Instance 1",
-        args: [],
-        canvasResizePolicy: 2,
-        executable: "Game",
-        experimentalVK: true,
-        fileSizes: { "Game.pck": 22994432, "Game.wasm": 35708238 },
-        focusCanvas: true,
-        gdextensionLibs: [],
-        serviceWorker: "Game.service.worker.js",
-        packfile: "Game",
-        wasmFile: `/${GODOT_CONFIG.executable}.wasm?cache-bust=${new Date().getTime()}`,     //replace with link to pck file
-        mainPack: `/${GODOT_CONFIG.executable}.pck?cache-bust=${new Date().getTime()}`,    //replace with link to main file
-      },
-  ];
-  
-  export { games };
-  
+  //   {
+  //     name: "Level 1",
+  //     args: [],
+  //     canvasResizePolicy: 2,
+  //     executable: "http://localhost:5173/game",
+  //     experimentalVK: true,
+  //     fileSizes: { "game.pck": 30483344, "game.wasm": 35708238 },
+  //     focusCanvas: true,
+  //     gdextensionLibs: [],
+  //     serviceWorker: `game.service.worker.js`,
+  //   },
+  {
+    name: "Level 1",
+    args: [],
+    canvasResizePolicy: 2,
+    executable: "/level-1",
+    experimentalVK: true,
+    fileSizes: { "level-1.pck": 24219360, "level-1.wasm": 1758196 },
+    focusCanvas: true,
+    gdextensionLibs: [],
+    serviceWorker: "level-1.service.worker.js",
+    mainPack:"/level-1.pck",
+  },
+];
+
+export { games };
+
+

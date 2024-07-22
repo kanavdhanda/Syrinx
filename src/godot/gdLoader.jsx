@@ -20,11 +20,12 @@ export default function GdLoader(props){
     // };
     // GODOT_CONFIG.mainPack = `/${GODOT_CONFIG.executable}.pck?cache-bust=${new Date().getTime()}`
     // GODOT_CONFIG.wasmFile =`/${GODOT_CONFIG.executable}.wasm?cache-bust=${new Date().getTime()}`
+
     const loadPck = async () => {   
         // try{
-        //     // const response = await fetch(`/${GODOT_CONFIG.executable}.pck?cache-bust=${new Date().getTime()}`);
-        //     // if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        //     //     GODOT_CONFIG.mainPack = `${GODOT_CONFIG.executable}.pck?cache-bust=${new Date().getTime()}`
+        //     const response = await fetch(`/${GODOT_CONFIG.executable}.wasm?cache-bust=${new Date().getTime()}`);
+        //     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        //         GODOT_CONFIG.wasmFile = `/${GODOT_CONFIG.executable}.wasm?cache-bust=${new Date().getTime()}`
         //         return true;
         //     } catch (e) {
         //         console.error('Failed to load .pck file:', e);
