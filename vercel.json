@@ -3,6 +3,10 @@
       {
         "source": "/level-1/:path*",
         "destination": "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/:path*"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
       }
     ],
     "headers": [
