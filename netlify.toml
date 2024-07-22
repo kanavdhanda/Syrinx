@@ -1,11 +1,23 @@
 [[redirects]]
   from = "/level-1/*"
-  to = "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/:splat"
+  to = "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-1/:splat"
   status = 200
   force = true
+  headers ={ Cross-Origin-Embedder-Policy ="require-corp",  Cross-Origin-Opener-Policy ="same-origin"}
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/level-1/*"
+  [headers.values]
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"
+
+[[headers]]
+  for = "/*"
   [headers.values]
     Cross-Origin-Embedder-Policy = "require-corp"
     Cross-Origin-Opener-Policy = "same-origin"
