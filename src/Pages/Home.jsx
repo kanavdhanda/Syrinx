@@ -44,7 +44,7 @@ export default function Home() {
             {menuItems.map((item, index) => (
               <>
               <img src={logo} alt="SX Logo" className={`${hoverIndex === index ? 'opacity-1' : 'opacity-0'} h-10 w-24'`} />
-              <div key={item.name} className="space-x-2 text-3xl mb-4" onMouseEnter={() => setHoveredIndex(index)}
+              <div key={item.name} className=" space-x-2 text-3xl mb-4" onMouseEnter={() => setHoveredIndex(index)}
                 >
                 {hoverIndex === index}
                 <Link to={item.path} className= {hoverIndex == index ? "text-blue-500":'text-white'}>
