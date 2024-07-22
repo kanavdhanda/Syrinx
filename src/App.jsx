@@ -10,7 +10,7 @@ import PrivateRoute from "./utils/auth"
 import Members from "./Pages/Members"
 import Navbar from "./Components/Navbar"
 import Rulebook from "./Pages/Rulebook"
-import PauseMenu from "./Components/PauseMenu"
+// import PauseMenu from "./Components/PauseMenu"
 
 function App() {
 
