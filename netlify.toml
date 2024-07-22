@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/level-1/*"
+  to = "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/:splat"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/level-1/*"
+  [headers.values]
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Opener-Policy = "same-origin"

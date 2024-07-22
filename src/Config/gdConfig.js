@@ -18,13 +18,14 @@ const games = [
     name: "Level 1",
     args: [],
     canvasResizePolicy: 2,
-    executable: "/level-1",
+    executable: "/level-1/level-1",
+    // executable: "https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-1/level-1",
     experimentalVK: true,
-    fileSizes: { "level-1.pck": 24219360, "level-1.wasm": 1758196 },
+    fileSizes: { "level-1.pck": 24219360, "level-1": 1758196 },
     focusCanvas: true,
     gdextensionLibs: [],
     serviceWorker: "level-1.service.worker.js",
-    mainPack:"/level-1.pck",
+    // mainPack:"https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-1/level-1.pck",
   },
 ];
 

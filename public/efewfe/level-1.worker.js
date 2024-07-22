@@ -9,6 +9,7 @@
 // that executes pthreads on the Emscripten application.
 
 'use strict';
+'worker-src';
 
 var Module = {};
 

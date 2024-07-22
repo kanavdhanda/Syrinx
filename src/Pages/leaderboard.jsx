@@ -4,98 +4,57 @@ import leader from "../assets/leader.png";
 import "../Css/Leader.css";
 
 export default function Leaderboard() {
-    const [leaderboard , setLeaderboard] = useState([]);    
+    const [leaderboard , setLeaderboard] = useState([]); 
+    // const [page, setPage] = useState(0);   
     const dataLao = async () => {
+      if(leaderboard.length === 0){
         try {
-            const response = await axios.get("https://localhost:8080/leaderboard");
-            
-            if (response.status !== 200) {
-                throw new Error("Something went wrong");
-            }
-
+            const response = await axios.get("http://127.0.0.1:8080/leaderboard/50/0");
+            console.log(response.data);
             setLeaderboard(response.data);
-            console.log("Data fetched successfully");
         } catch (e) {
             console.error("Error fetching data:", e);
 
-        }
+        }}
+
     }
 
+
     useEffect(()=>{
-        dataLao();
+      dataLao();
     },[])
-
-
-
-// test data
-    const teams = [
-        { rank: 4, name: 'HALLO', score: 1000 },
-        { rank: 5, name: 'TEAM1', score: 750 },
-        { rank: 6, name: 'TEAM1', score: 750 },
-        { rank: 7, name: 'TEAM1', score: 750 },
-        { rank: 8, name: 'TEAM1', score: 750 },
-        { rank: 6, name: 'TEAM1', score: 750 },
-        { rank: 6, name: 'TEAM1', score: 750 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 7, name: 'TEAM2', score: 690 },
-        { rank: 8, name: 'TEAM3', score: 620 },
-        { rank: 9, name: 'TEAM4', score: 530 },
-      ];
-
 
 
   return (
     
     <div className="flex flex-col items-center w-full h-[70vh]">
       <h1 className="text-5xl mb-5">Leaderboard</h1>
-      <h1 className="ml-16 mt-8 text-2xl">TEAM 1</h1>
-      <h1 className="mt-14 mr-[400px] text-2xl">TEAM 2</h1>
-      <h1 className="mt-8 ml-[420px] text-2xl">TEAM 3</h1>
+      <h1 className="ml-16 mt-8 text-2xl">{leaderboard[0]?.N}</h1>
+      <h1 className="mt-14 mr-[400px] text-2xl">{leaderboard[1]?.N}</h1>
+      <h1 className="mt-8 ml-[420px] text-2xl">{leaderboard[2]?.N}</h1>
       <img src={leader} alt="" className="h-[250px] absolute mt-[80px] w-[750px]" />
 
 
-      <div className=" mt-28 bg-[#1f1e1e] py-5 rounded-xl px-5 flex justify-center w-[900px]">
+      <div className=" mt-28 bg-[#1f1e1e] py-5 rounded-xl px-5 flex justify-center w-[900px] ">
       <table >
-        <thead>
+        <thead >
           <tr >
             <th>RANK</th>
             <th>TEAM NAME</th>
             <th>SCORE</th>
           </tr>
         </thead>
-        <tbody>
-          {teams.map((team) => (
-            <tr key={team.rank}>
-              <td>{team.rank}</td>
-              <td>{team.name}</td>
-              <td>{team.score}</td>
+        <tbody className="overflow-y-auto h-20">
+          {leaderboard.map((team, index) => (
+            <tr key={index}>
+              <td>{index+1}</td>
+              <td>{team.N}</td>
+              <td>{team.P}</td>
             </tr>
           ))}
         </tbody>
       </table>
       </div>
     </div>
-  );
+  )
 }
