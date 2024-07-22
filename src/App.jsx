@@ -30,7 +30,7 @@ function App() {
           <Route path="/leaderboard" element={<PrivateRoute><Navbar /><Leaderboard /></PrivateRoute>} />
           <Route path="/rulebook" element={<PrivateRoute><Navbar /><Rulebook /></PrivateRoute>}></Route>
           <Route path="/members" element={<PrivateRoute><Navbar /><Members /></PrivateRoute>}></Route>
-          <Route path="/pausemenu" element={<PrivateRoute><PauseMenu /></PrivateRoute>}></Route>
+          {/* <Route path="/pausemenu" element={<PrivateRoute><PauseMenu /></PrivateRoute>}></Route> */}
 
 
           <Route path="*" element={<h1>Not Found</h1>} />
