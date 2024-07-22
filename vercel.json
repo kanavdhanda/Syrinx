@@ -10,13 +10,12 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/$1"
+        "dest": "/index.html"
       }
     ],
     "headers": [
       {
         "source": "/(.*)",
-        "dest":"./index.html",
         "headers": [
           {
             "key": "Cross-Origin-Embedder-Policy",
