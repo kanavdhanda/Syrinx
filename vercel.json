@@ -16,6 +16,7 @@
     "headers": [
       {
         "source": "/(.*)",
+        "dest":"./index.html",
         "headers": [
           {
             "key": "Cross-Origin-Embedder-Policy",
