@@ -8,17 +8,20 @@ import char2 from '../assets/char2.png';
 import char3 from '../assets/char3.png';
 import text from '../assets/text.png';
 
+
+// Don't Remove for images for members
+
 const members = [
-  { img: char1, name: 'John doe',discID:'Web Developer' },
-  { img: char2, name: 'John doe', discID:'Web Developer' },
-  { img: char3, name: 'John doe', discID:'Web Developer' },
-  { img: char1, name: 'John doe', discID:'Web Developer' },
+  { img: char1 },
+  { img: char2 },
+  { img: char3 },
+  { img: char1},
 ];
 
 const Members = () => {
   const [team, setTeam]= React.useState([]);
   const Images = () => {  
-    for (let i = 0; i < team.A.length; i++){
+   
       setTeam(currentTeam => {
         const updatedTeam = currentTeam.A.map((item, index) => ({
           ...item,
@@ -26,7 +29,7 @@ const Members = () => {
         }));
         return { ...currentTeam, A: updatedTeam };
       });
-    }
+    
   }
 
   const dataLao = async()=>{
@@ -34,13 +37,12 @@ const Members = () => {
       const tokenString = Cookies.get("token").split(",");
       
       const sesId = tokenString.map(item => parseInt(item, 10));
-      console.log(sesId);
 
       const response = await axios.post("http://127.0.0.1:8080/teaminfo",{
         SessionID : sesId
       }
       )
-      
+      console.log(response.data);
       setTeam(response.data);
       Images();
     }
@@ -60,15 +62,15 @@ const Members = () => {
         <div className="text-4xl mt-5">Team: {team.N}</div>
       </div>
       <div className="members-container">
-        {team.A.map((member, index) => (
-          <div key={index} className={`member flex justify-center items-center flex-col ${index === 0 || index === 3 ? 'margin-top-50' : ''}`}>
-            <img src={member.img} alt={member.name} className="member-image" />
-            <div className="member-info">
-              <p className="member-name">{member.name}</p>
-              <p className="member-role">{member.discID}</p>
-            </div>
-          </div>
-        ))}
+      {team.A ? team.A.map((member, index) => (
+  <div key={index} className={`member flex justify-center items-center flex-col ${index === 0 || index === 3 ? 'margin-top-50' : ''}`}>
+    <img src={member.img} alt={member.Username} className="member-image" />
+    <div className="member-info">
+      <p className="member-name">{member.Username}</p>
+      <p className="member-role">{member.DiscordID}</p>
+    </div>
+  </div>
+)) : null}
       </div>
     </>
   );
