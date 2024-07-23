@@ -10,6 +10,7 @@ import PrivateRoute from "./utils/auth"
 import Members from "./Pages/Members"
 import Navbar from "./Components/Navbar"
 import Rulebook from "./Pages/Rulebook"
+import MainPage from "./Pages/MainPage"
 // import PauseMenu from "./Components/PauseMenu"
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Router>
           
         <Routes>
+          
+          <Route path="/mainpage" element={<MainPage />} />
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<PrivateRoute><Navbar /><Home /></PrivateRoute>} />
           <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
