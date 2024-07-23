@@ -22,6 +22,11 @@ export default function Leaderboard() {
 
     useEffect(()=>{
       dataLao();
+      const interval = setInterval(() => {
+      dataLao();
+    }, 60000); // 30000 milliseconds = 30 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
     },[])
 
 

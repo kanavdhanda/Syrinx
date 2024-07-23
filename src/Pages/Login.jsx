@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import {useNavigate} from "react-router-dom";
+
 import "../Css/Login.css";
 import "../index.css";
 import text from "../assets/text.png";
@@ -8,6 +10,7 @@ import logo from "../assets/logo.png";
 import char from "../assets/char.png";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     Username: "",
     Password: "",
@@ -20,13 +23,13 @@ export default function Login() {
     console.log(formData.Password);
 
     try {
-      const response = await axios.post("https://localhost:8080/login", {
-        username: formData.Username,
-        password: formData.Password,
+      const response = await axios.post("http://localhost:8080/authanticate", {
+        Username: formData.Username,
+        Password: formData.Password,
       });
-
-      if (response.data.token) {
-        Cookies.set("token", response.data.token, {
+      console.log(response.data.SessionID);
+      if (response.data.SessionID) {
+        Cookies.set("token", response.data.SessionID, {
           expires: 1,
           secure: true,
           sameSite: "strict",
@@ -35,10 +38,14 @@ export default function Login() {
       } else {
         setError("Invalid credentials");
       }
+
+      navigate("/home");
     } catch (err) {
       console.error("Login error:", err);
       setError("Login failed. Please try again.");
     }
+
+
   };
 
   const handleChange = (e) => {

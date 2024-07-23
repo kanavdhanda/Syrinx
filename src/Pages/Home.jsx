@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+
 import char from "../assets/char.png";
 import text from "../assets/text.png";
 import logo from "../assets/logo.png";
@@ -42,16 +42,15 @@ export default function Home() {
         <div className="flex items-center space-y-4 text-xl">
           <div className="home_page_grid">
             {menuItems.map((item, index) => (
-              <>
-              <img src={logo} alt="SX Logo" className={`${hoverIndex === index ? 'opacity-1' : 'opacity-0'} h-10 w-24'`} />
-              <div key={item.name} className=" space-x-2 text-3xl mb-4" onMouseEnter={() => setHoveredIndex(index)}
-                >
-                {hoverIndex === index}
-                <Link to={item.path} className= {hoverIndex == index ? "text-blue-500":'text-white'}>
-                  {item.name}
-                </Link>
-              </div>
-              </>
+             <React.Fragment key={item.name}> {/* Use item's unique property as key */}
+             <img src={logo} alt="SX Logo" className={`${hoverIndex === index ? 'opacity-1' : 'opacity-0'} h-10 w-24'`} />
+             <div className="space-x-2 text-3xl mb-4" onMouseEnter={() => setHoveredIndex(index)}>
+               {hoverIndex === index}
+               <Link to={item.path} className={hoverIndex == index ? "text-blue-500" : 'text-white'}>
+                 {item.name}
+               </Link>
+             </div>
+           </React.Fragment>
             ))}
           </div>
           <div className="ml-10">

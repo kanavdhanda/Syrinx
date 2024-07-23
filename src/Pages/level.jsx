@@ -34,6 +34,7 @@ export default function Level() {
           </>
         )}
       </div> */}
+      
       <GdLoader gdConfig={games[gameId]} />
     </div>
   );
