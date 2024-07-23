@@ -1,3 +1,4 @@
+
 import Login from "./Pages/Login"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
@@ -23,8 +24,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<PrivateRoute><Navbar /><Home /></PrivateRoute>} />
-          <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
-          <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
+          <Route path="/lvls" element={<Levels />} />    
+          <Route path="/lvls/:id" element={<Level />} />
           {/* <Route path="/lvls/0" element={<PrivateRoute><Level /></PrivateRoute>} /> */}
 
           <Route path="/leaderboard" element={<PrivateRoute><Navbar /><Leaderboard /></PrivateRoute>} />

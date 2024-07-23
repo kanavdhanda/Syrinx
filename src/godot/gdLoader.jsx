@@ -8,7 +8,7 @@ export default function GdLoader(props){
     const statusProgressInnerRef = useRef(null);
     const statusIndeterminateRef = useRef(null);
     const statusNoticeRef = useRef(null);
-    const engineRef = useRef(null);x
+    const engineRef = useRef(null);
 
     
     useEffect(() => {  
