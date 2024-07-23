@@ -15,7 +15,7 @@ const games = [
   //     serviceWorker: `game.service.worker.js`,
   //   },
   {
-    name: "Level 1",
+    name: "level-1",
     args: [],
     canvasResizePolicy: 2,
     executable: "/level-1/level-1",

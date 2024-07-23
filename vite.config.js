@@ -60,5 +60,27 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
   },
+  server:{
+    proxy: {
+      '/level-1': {
+        target: 'https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/',
+      //   target: 'https://api.helix.ccstiet.com/',
+        changeOrigin: true,
+      //   rewrite: (path) => path.replace(/^\/level-1/, ''),
+        configure: (proxy) => {
+          proxy.on('proxyRes', (proxyRes, req, res) => {
+            // Add custom headers here
+            proxyRes.headers['Cross-Origin-Embedder-Policy'] = 'require-corp';
+             proxyRes.headers['Cross-Origin-Opener-Policy'] = 'same-origin';
+          }); 
+        },
+  
+      }},
+      headers: {
+              "Cross-Origin-Embedder-Policy": "require-corp",
+              "Cross-Origin-Opener-Policy": "same-origin",
+            },
+  },
+
   publicDir: 'public',
 });

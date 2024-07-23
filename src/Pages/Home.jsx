@@ -60,7 +60,7 @@ export default function Home() {
         <div className="flex items-center justify-center mt-24 text-center text-xl">
           <div>
             <p>CCS@2024</p>
-            <p>CREATIVE COMPUTING INDUSTRY</p>
+            <p>CREATIVE COMPUTING SOCIETY</p>
           </div>
         </div>
       </div>

@@ -13,8 +13,8 @@ export default function Level() {
     <div className="relative w-full h-full">
          {/* Change the text to button and style it */}
 
-      {/* <button
-        className="absolute bg-red-300 p-10"
+      <button
+        className="absolute bg-red-300 p-10 top-0 left-0 z-50"
         onClick={() => setIsPaused(!isPaused)}
       >
         Pause
@@ -24,17 +24,19 @@ export default function Level() {
         style={{
           backgroundColor: isPaused ? "rgba(0,0,0,0.5)" : "transparent",
         }}
-      > */}
+      >
       
         {/* Down below you will need to write code for the Pause screen */}
 
-        {/* {isPaused && (
+        {isPaused && (
           <>
-            <PauseMenu />
+          <div className="absolute z-40 top-0 left-0 w-screen h-full transition-all ">
+          <PauseMenu />
+          </div>
           </>
         )}
-      </div> */}
-      
+      </div>
+
       <GdLoader gdConfig={games[gameId]} />
     </div>
   );
