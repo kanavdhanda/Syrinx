@@ -10,6 +10,9 @@ import PrivateRoute from "./utils/auth"
 import Members from "./Pages/Members"
 import Navbar from "./Components/Navbar"
 import Rulebook from "./Pages/Rulebook"
+import MainPage from "./Pages/MainPage"
+import LevelSelect from "./Pages/LevelSelect"
+import Coverpage from "./Components/Coverpage"
 // import PauseMenu from "./Components/PauseMenu"
 
 function App() {
@@ -21,7 +24,12 @@ function App() {
         <Router>
           
         <Routes>
+          
+          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<Coverpage />} />
           <Route path="/" element={<Login />} />
+
+          <Route path="/levelselect" element={<LevelSelect />} />
           <Route path="/home" element={<PrivateRoute><Navbar /><Home /></PrivateRoute>} />
           <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
           <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
