@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import test from '../assets/bg2.jpeg'
 import { useNavigate } from "react-router-dom";
-
+import Cookies from "js-cookie";
+import axios from "axios";
 
 const Levels = () => {
   const [isActive, setIsActive] = useState([false, false, false]);
@@ -13,6 +14,27 @@ const Levels = () => {
     // setSelectedLevels(newSelectedLevels);
     navigate("/lvls/" + index);
   };
+  
+  const dataLao = async() => {
+    try {
+      const tokenString = Cookies.get("token").split(",");
+      const sesId = tokenString.map(item => parseInt(item, 10));
+      const response = await axios.post(
+        "https://api.syrinx.ccstiet.com/teaminfo", 
+        {
+        SessionID: sesId
+      });
+      console.log(response.data);
+      if(response.data.error){
+        toaster.error(response.data.error);
+      }
+    } catch (e) {
+      console.error("Error fetching data:", e);
+    }
+  }
+  useEffect(() => {
+    dataLao();
+  },[])
 
   return (
     <>
