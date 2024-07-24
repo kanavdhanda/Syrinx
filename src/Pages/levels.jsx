@@ -23,7 +23,7 @@
 // }
 
 import React, { useState } from 'react';
-import test from '../assets/bg2.jpg';
+import test from '../assets/bg2.jpeg';
 import { useNavigate } from "react-router-dom";
 
 const LevelSelect = () => {
