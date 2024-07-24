@@ -3,6 +3,7 @@
   justify-content: space-around;
   align-items: center;
   height: 43vh;
+  gap: 15vw;
   background-color: #000; /* Optional: to match the background of the image */
 }
 

@@ -23,12 +23,12 @@ export default defineConfig({
         //         console.log('Proxying request:', req.url, 'to:', proxyReq.path);
         //       },
         //       onError: (err, req, res) => {
-        //         console.log('Error proxying request:', req.url, err);   
+        //         console.log('Error proxying request:', req.url, err);
         //     },
         //   },
         // },
         proxy: {
-            '/level-1': {
+            '/game-1': {
               target: 'https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/',
             //   target: 'https://api.helix.ccstiet.com/',
               changeOrigin: true,
@@ -40,7 +40,7 @@ export default defineConfig({
             proxyRes.headers['Cross-Origin-Opener-Policy'] = 'same-origin';
                 });
               },
-      
+
             }},
         headers: {
                 "Cross-Origin-Embedder-Policy": "require-corp",
@@ -50,15 +50,20 @@ export default defineConfig({
     publicDir: 'public',
 });
 
-
-// import { defineConfig } from 'vite';
-// import react from '@vitejs/plugin-react';
+// import { defineConfig } from "vite";
+// import react from "@vitejs/plugin-react";
 
 // export default defineConfig({
 //   plugins: [react()],
 //   build: {
-//     outDir: 'dist',
-//     assetsDir: 'assets',
+//     outDir: "dist",
+//     assetsDir: "assets",
 //   },
-//   publicDir: 'public',
+//   server: {
+//     headers: {
+//       "Cross-Origin-Embedder-Policy": "require-corp",
+//       "Cross-Origin-Opener-Policy": "same-origin",
+//     },
+//   },
+//   publicDir: "public",
 // });

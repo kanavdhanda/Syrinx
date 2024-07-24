@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import leader from "../assets/leader.png";
-import "../Css/Leader.css";
+import "../css/Leader.css";
 
 export default function Leaderboard() {
-    const [leaderboard , setLeaderboard] = useState([]); 
-    // const [page, setPage] = useState(0);   
+    const [leaderboard , setLeaderboard] = useState([]);  
     const dataLao = async () => {
       if(leaderboard.length === 0){
         try {
-            const response = await axios.get("http://127.0.0.1:8080/leaderboard");
+            const response = await axios.get("https://api.syrinx.ccstiet.com/leaderboard");
             console.log(response.data);
             setLeaderboard(response.data);
         } catch (e) {
@@ -18,8 +17,6 @@ export default function Leaderboard() {
         }}
 
     }
-
-
     useEffect(()=>{
       dataLao();
       const interval = setInterval(() => {

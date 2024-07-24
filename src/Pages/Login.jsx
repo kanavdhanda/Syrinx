@@ -112,7 +112,7 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
 
-import "../Css/Login.css";
+import "../css/Login.css";
 import "../index.css";
 import text from "../assets/text.png";
 import logo from "../assets/logo.png";
@@ -137,7 +137,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/authanticate",
+        "https://api.syrinx.ccstiet.com/authanticate",
         {
           Username: sanitizedUsername,
           Password: sanitizedPassword,

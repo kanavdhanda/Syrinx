@@ -12,12 +12,11 @@ export default function PrivateRoute({ children }) {
         try {
             const tokenString = token1.split(",");
             const sesId = tokenString.map(item => parseInt(item, 10));
-
-            const response = await axios.post("http://127.0.0.1:8080/teaminfo", {
+            const response = await axios.post("https://api.syrinx.ccstiet.com/teaminfo", {
                 SessionID: sesId
             });
 
-            console.log(response.data);
+            console.log(response.data.error);
             return response.data;
         } catch (e) {
             console.error("Error fetching data:", e);
