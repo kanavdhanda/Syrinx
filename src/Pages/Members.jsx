@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { toast } from "react-toastify";
 
 
 import char1 from '../assets/char1.png';

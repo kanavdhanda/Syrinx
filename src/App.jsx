@@ -14,7 +14,7 @@ import MainPage from "./Pages/MainPage"
 import LevelSelect from "./Pages/LevelSelect"
 import Coverpage from "./Components/Coverpage"
 // import PauseMenu from "./Components/PauseMenu"
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -35,12 +35,9 @@ function App() {
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
           <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
-          {/* <Route path="/lvls/0" element={<PrivateRoute><Level /></PrivateRoute>} /> */}
-
           <Route path="/leaderboard" element={<PrivateRoute><Navbar /><Leaderboard /></PrivateRoute>} />
           <Route path="/rulebook" element={<PrivateRoute><Navbar /><Rulebook /></PrivateRoute>}></Route>
           <Route path="/members" element={<PrivateRoute><Navbar /><Members /></PrivateRoute>}></Route>
-          {/* <Route path="/pausemenu" element={<PrivateRoute><PauseMenu /></PrivateRoute>}></Route> */}
 
 
           <Route path="*" element={<h1>Not Found</h1>} />
