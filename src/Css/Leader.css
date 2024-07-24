@@ -4,11 +4,12 @@ table {
   }
   
   th, td {
-    padding: 0px 100px;
+    padding: 0px 80px;
   }
   
   th {
     font-size: 29px;
+    sticky: top;
     padding-bottom: 10px;
   }
   

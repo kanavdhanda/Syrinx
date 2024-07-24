@@ -23,7 +23,7 @@ export default function Login() {
     console.log(formData.Password);
 
     try {
-      const response = await axios.post("http://localhost:8080/authanticate", {
+      const response = await axios.post("http://localhost:8081/authanticate", {
         Username: formData.Username,
         Password: formData.Password,
       });
@@ -68,11 +68,12 @@ export default function Login() {
         />
 
         <div className="grid grid-cols-2 gap-5">
+          
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-y-2 items-center p-6 bg-black rounded-lg shadow-lg"
           >
-            <h1 className="mb-6 text-6xl font-bold text-white">Login</h1>
+            <h2 className="text-5xl mb-5">Login</h2>
             <input
               name="Username"
               type="text"
