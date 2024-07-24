@@ -61,15 +61,9 @@ export default function Login() {
             
       }
     } catch (err) {
-      console.error("Login error:", err.response ? err.response.data : err.message);
-      console.error("Login error:", e);
-            if(err.response.data.error){
-              toast.error('invalid data\n' + err.response ? err.response.data : err.message, {
-                position: "top-right",
-                autoClose: 4999,
-                theme: "dark",
-              });
-            }
+      toast.error("Login error:" + err.response ? err.response.data : err.message);
+      toast.error("Login error:" + e);
+
     }
   };
   
