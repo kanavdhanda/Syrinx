@@ -26,7 +26,7 @@ export default function MainPage() {
 
               </div>
             </div>
-            <div className="w-30px mt-[15vh] random-flicker flex-col" id='Register' >
+            <div className="w-30px mt-[23vh] random-flicker flex-col" id='Register' >
             <div className="bggrad456 z-100 h-[20vh] "></div>
               <Coverpage/>
         </div>
