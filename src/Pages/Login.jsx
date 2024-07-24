@@ -29,7 +29,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8080/authanticate",
+        "https://api.syrinx.ccstiet.com/authanticate",
         {
           Username: sanitizedUsername,
           Password: sanitizedPassword,
