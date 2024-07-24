@@ -10,9 +10,8 @@ const menuItems = [
   { name: "MEMBERS", path: "/members" },
 ];
 
-export default function Home() {
+export default function PauseMenu() {
   
-  const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
   const [hoverIndex, setHoveredIndex] = useState(0);
 
@@ -33,7 +32,7 @@ export default function Home() {
   }, [hoverIndex]);
   
   return (
-    <div className="flex flex-col items-center justify-center bg-black w-full h-screen text-white">
+    <div className="flex flex-col items-center justify-center bg-black w-full h-screen text-white " style={{backgroundColor: 'rgba(0,0,0,0.5)'}}>
       <img src={text} alt="" className="mb-20 w-[500px] transition-all" />
       <div className="flex flex-col space-y-4 text-xl">
         {menuItems.map((item, index) => (
@@ -44,11 +43,6 @@ export default function Home() {
             }`}
             onMouseEnter={() => setHoveredIndex(index)}
           >
-            <img
-              src={logo}
-              alt="SX Logo"
-              className={`${hoverIndex === index ? "opacity-100" : "opacity-0"} h-10`}
-            />
             <Link to={item.path}>
               {item.name}
             </Link>
@@ -58,7 +52,7 @@ export default function Home() {
       <div className="flex items-center justify-center mt-24 text-center text-xl">
         <div>
           <p>CCS@2024</p>
-          <p>CREATIVE COMPUTING INDUSTRY</p>
+          <p>CREATIVE COMPUTING SOCIETY</p>
         </div>
       </div>
     </div>
