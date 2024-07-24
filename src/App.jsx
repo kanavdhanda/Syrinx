@@ -14,6 +14,8 @@ import MainPage from "./Pages/MainPage"
 import LevelSelect from "./Pages/LevelSelect"
 import Coverpage from "./Components/Coverpage"
 // import PauseMenu from "./Components/PauseMenu"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -42,9 +44,10 @@ function App() {
 
 
           <Route path="*" element={<h1>Not Found</h1>} />
-
+          
           
         </Routes>
+        <ToastContainer position="top-right" autoClose={4999} theme="dark" />
       </Router>
     </>
   )

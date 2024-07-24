@@ -9,6 +9,7 @@ import "../Css/Login.css";
 import text from "../assets/text.png";
 import logo from "../assets/logo.png";
 import char from "../assets/char.png";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "https://api.syrinx.ccstiet.com/authanticate",
+        "http://127.0.0.1:8080/authanticate",
         {
           Username: sanitizedUsername,
           Password: sanitizedPassword,
@@ -40,6 +41,13 @@ export default function Login() {
           },
         }
       );
+      if(response.data.error){
+        toast.error('Invalid Credentials\n' + response.data.error, {
+          position: "top-right",
+          autoClose: 4999,
+          theme: "dark",
+        });
+      }
 
       if (response.data.SessionID) {
         Cookies.set("token", response.data.SessionID, {
@@ -50,13 +58,22 @@ export default function Login() {
         console.log("Login successful!");
         navigate("/home");
       } else {
-        setError("Invalid credentials");
+        console.error("Invalid Credentials", e);
+            
       }
     } catch (err) {
       console.error("Login error:", err.response ? err.response.data : err.message);
-      setError("Login failed. Please try again.");
+      console.error("Login error:", e);
+            if(err.response.data.error){
+              toast.error('invalid data\n' + err.response ? err.response.data : err.message, {
+                position: "top-right",
+                autoClose: 4999,
+                theme: "dark",
+              });
+            }
     }
   };
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;

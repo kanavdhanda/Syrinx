@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import leader from "../assets/leader.png";
 import "../Css/Leader.css";
+import { toast } from "react-toastify";
 
 export default function Leaderboard() {
     const [leaderboard , setLeaderboard] = useState([]);  
@@ -13,6 +14,13 @@ export default function Leaderboard() {
             setLeaderboard(response.data);
         } catch (e) {
             console.error("Error fetching data:", e);
+            if(response.data.error){
+              toast.error('Failed to register!\n' + e.message, {
+                position: "top-right",
+                autoClose: 4999,
+                theme: "dark",
+              });
+            }
 
         }}
 
