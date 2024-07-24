@@ -56,13 +56,15 @@ export default function Login() {
         });
         console.log("Login successful!");
         navigate("/home");
-      } else {
-        console.error("Invalid Credentials", e);
-            
       }
     } catch (err) {
-      toast.error("Login error:" + err.response ? err.response.data : err.message);
-      toast.error("Login error:" + e);
+      console.log(err.response.data.error);
+      if(err.response.data.error){
+        if(err.response.data.error === "mongo: no documents in result"){
+          toast.error("Invalid Credentials\n");
+        }
+      }
+      // toast.error("Login error:" + e);
 
     }
   };

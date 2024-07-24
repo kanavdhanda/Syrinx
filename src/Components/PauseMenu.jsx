@@ -4,7 +4,7 @@ import text from "../assets/text.png";
 import logo from "../assets/logo.png";
 
 const menuItems = [
-  { name: "RESUME", path: "/lvls" },
+  // { name: "RESUME", path: "/lvls" },
   { name: "RULEBOOK", path: "/rulebook" },
   { name: "LEADERBOARD", path: "/leaderboard" },
   { name: "MEMBERS", path: "/members" },

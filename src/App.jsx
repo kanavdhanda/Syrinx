@@ -32,7 +32,7 @@ function App() {
           <Route path="/" element={<Login />} />
 
           <Route path="/levelselect" element={<LevelSelect />} />
-          <Route path="/home" element={<PrivateRoute><Navbar /><Home /></PrivateRoute>} />
+          <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
           <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
           {/* <Route path="/lvls/0" element={<PrivateRoute><Level /></PrivateRoute>} /> */}

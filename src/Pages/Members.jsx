@@ -43,7 +43,7 @@ const Members = () => {
       setTeam(response.data);
       Images();
     } catch (e) {
-      console.error("Error fetching data:", e);
+      toast.error("Error fetching data:", e.response.data.error);
     }
   }
 

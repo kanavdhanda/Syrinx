@@ -1,5 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 import char from "../assets/char.png";
 import text from "../assets/text.png";
@@ -10,6 +11,7 @@ const menuItems = [
   { name: "RULEBOOK", path: "/rulebook" },
   { name: "LEADERBOARD", path: "/leaderboard" },
   { name: "MEMBERS", path: "/members" },
+  {name:"LOGOUT",path:"/"}
 ];
 
 export default function Home() {
@@ -27,6 +29,12 @@ export default function Home() {
       navigate(menuItems[hoverIndex].path);}
   };
 
+  const handleLogout = () => {  
+    Cookies.remove('token');
+        navigate('/');
+  }
+
+
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
@@ -39,16 +47,20 @@ export default function Home() {
     <>
       <div className="flex flex-col items-center justify-center bg-black w-full h-[85vh] text-white">
         <img src={text} alt="" className="mb-10" />
-        <div className="flex items-center space-y-4 text-xl">
+        <div className="flex items-left space-y-4 text-xl">
           <div className="home_page_grid">
             {menuItems.map((item, index) => (
              <React.Fragment key={item.name}> {/* Use item's unique property as key */}
              <img src={logo} alt="SX Logo" className={`${hoverIndex === index ? 'opacity-1' : 'opacity-0'} h-10 w-24'`} />
              <div className="space-x-2 text-3xl mb-4" onMouseEnter={() => setHoveredIndex(index)}>
                {hoverIndex === index}
-               <Link to={item.path} className={hoverIndex == index ? "text-blue-500" : 'text-white'}>
+               {item.name!="LOGOUT" &&<Link to={item.path} className={hoverIndex == index ? "text-blue-500" : 'text-white'}>
                  {item.name}
-               </Link>
+               </Link>}
+               {item.name=="LOGOUT" &&
+               <div className={ "text-red-500 hover:cursor-pointer"} onClick={handleLogout}>
+                 <span>{item.name}</span>
+                 </div>}
              </div>
            </React.Fragment>
             ))}
@@ -60,7 +72,7 @@ export default function Home() {
         <div className="flex items-center justify-center mt-24 text-center text-xl">
           <div>
             <p>CCS@2024</p>
-            <p>CREATIVE COMPUTING INDUSTRY</p>
+            <p>CREATIVE COMPUTING SOCIETY</p>
           </div>
         </div>
       </div>
