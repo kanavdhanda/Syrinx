@@ -62,7 +62,7 @@ const Members = () => {
             <img src={team.A[0].img} alt={team.A[0].Username} className="member-image" />
             <div className="member-info">
               <p className="member-name">{team.A[0].Username}</p>
-              <p className="member-role">{team.A[0].DiscordID}</p>
+              <p className="member-role1">{team.A[0].DiscordID}</p>
             </div>
           </div>
         </div>
