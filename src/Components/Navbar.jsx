@@ -6,9 +6,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
     const handleLogout = () => {
-        // Remove the token from local storage
         Cookies.remove('token');
-        // Redirect to the login page
         navigate('/');
     };
   return (
