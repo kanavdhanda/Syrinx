@@ -113,7 +113,7 @@ import { useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
 
 import "../css/Login.css";
-import "../index.css";
+
 import text from "../assets/text.png";
 import logo from "../assets/logo.png";
 import char from "../assets/char.png";
