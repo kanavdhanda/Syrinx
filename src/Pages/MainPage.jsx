@@ -1,8 +1,8 @@
-import text from '../assets/text.png';
+// import text from '../assets/text.png';
 import Coverpage from '../Components/Coverpage';
 import HeroSection from '../Components/HeroSection';
 import SponserArea from '../Components/SponserArea';
-
+import '../Css/Mainpage.css'
 
 export default function MainPage() {
 
