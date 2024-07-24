@@ -9,7 +9,7 @@ export default function Leaderboard() {
     const dataLao = async () => {
       if(leaderboard.length === 0){
         try {
-            const response = await axios.get("http://127.0.0.1:8080/leaderboard/50/0");
+            const response = await axios.get("http://127.0.0.1:8080/leaderboard");
             console.log(response.data);
             setLeaderboard(response.data);
         } catch (e) {
@@ -24,9 +24,9 @@ export default function Leaderboard() {
       dataLao();
       const interval = setInterval(() => {
       dataLao();
-    }, 60000); // 30000 milliseconds = 30 seconds
+    }, 60000); 
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval); 
     },[])
 
 
