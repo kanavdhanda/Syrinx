@@ -2,16 +2,14 @@ import React from 'react';
 
 export default function Pagination({ numberOfPages, currentPage, onPageChange }) {
   const pageNumbers = [];
-  const maxPagesToShow = 5; // Maximum number of page buttons to show
+  const maxPagesToShow = 5;
 
   const createPageNumbers = () => {
     if (numberOfPages <= maxPagesToShow) {
-      // If the total number of pages is less than or equal to the maximum pages to show
       for (let i = 1; i <= numberOfPages; i++) {
         pageNumbers.push(i);
       }
     } else {
-      // If the total number of pages is more than the maximum pages to show
       const leftBound = Math.max(1, currentPage - 2);
       const rightBound = Math.min(numberOfPages, currentPage + 2);
 
@@ -38,7 +36,7 @@ export default function Pagination({ numberOfPages, currentPage, onPageChange })
   createPageNumbers();
 
   return (
-    <div className="flex flex-row space-x-2 mt-4">
+    <div className="flex flex-row space-x-2 my-4 h-full">
       {pageNumbers.map((number, index) => (
         <button
           key={index}

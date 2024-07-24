@@ -53,7 +53,7 @@ export default function Leaderboard() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-[70vh]">
+    <div className="flex flex-col items-center w-full h-screen my-4">
       <h1 className="text-5xl mb-5">Leaderboard</h1>
      
       <h1 className="ml-36 mt-8 text-2xl">{leaderboard[0]?.N}</h1>
@@ -61,7 +61,7 @@ export default function Leaderboard() {
       <h1 className="mt-8 ml-[490px] text-2xl">{leaderboard[2]?.N}</h1>
       <img src={leader} alt="" className="h-[250px] absolute mt-[80px] w-[750px]" />
 
-      <div className="mt-32 bg-[#1f1e1e] py-5 rounded-xl px-5 flex flex-col justify-center w-[900px]">
+      <div className="mt-28 bg-[#1f1e1e] py-5 rounded-xl px-5 flex flex-col justify-center w-[900px]">
       {/* <div className="flex mb-4">
         <input
           type="text"
@@ -93,7 +93,10 @@ export default function Leaderboard() {
           </tbody>
         </table>
       </div>
+
       <Pagination numberOfPages={Math.ceil(leaderboard.length / teamsPerPage)} currentPage={currentPage} onPageChange={paginate} />
+
+
     </div>
   );
 }
