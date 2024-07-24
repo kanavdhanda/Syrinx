@@ -1,40 +1,17 @@
-
-// import { games } from "../Config/gdConfig"
-
-// import { useNavigate } from "react-router-dom";
-
-// export default function Levels(){
-//     const navigate = useNavigate();
-//     const levelClick = (index) => {
-//         navigate("/lvls/"+index)
-//     }
-//     return(
-//         <>
-//         {games.map((game, index) => {
-//             return(
-//                 <div className="flex flex-col items-center justify-center"key={index}>
-//                     <button className="text-red-500 p-10 bg-black"  onClick={()=>{levelClick(index)}}>Level : {index+1}</button>
-//                 </div>
-//             )
-//         })
-//         }
-//         </>
-//     )
-// }
-
 import React, { useState } from 'react';
-import test from '../assets/bg2.jpeg';
+import test from '../assets/bg2.jpeg'
 import { useNavigate } from "react-router-dom";
 
-const LevelSelect = () => {
-  const [selectedLevels, setSelectedLevels] = useState([false, false, false, false]);
-const navigate = useNavigate();
+
+const Levels = () => {
+  const [isActive, setIsActive] = useState([false, false, false]);
+  const navigate = useNavigate();
+
   const handleClick = (index) => {
     // const newSelectedLevels = [...selectedLevels];
     // newSelectedLevels[index] = !newSelectedLevels[index];
     // setSelectedLevels(newSelectedLevels);
-        navigate("/lvls/"+index)
-
+    navigate("/lvls/" + index);
   };
 
   return (
@@ -65,12 +42,12 @@ const navigate = useNavigate();
             >
               <img src={test} alt='level3' className="w-full h-full object-cover rounded-2xl" />
             </div>
-            {/* <div
+            <div
               className="w-[340px] h-[200px] bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0"
-              onClick={() => handleClick(3)}
+            //   onClick={() => handleClick(3)}
             >
               <img src={test} alt='level4' className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0" />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
@@ -78,4 +55,4 @@ const navigate = useNavigate();
   );
 };
 
-export default LevelSelect;
+export default Levels;
