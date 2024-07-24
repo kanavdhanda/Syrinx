@@ -1,3 +1,4 @@
+import React from 'react'
 import scroll from '../assets/scroll2.png'
 
 
@@ -5,8 +6,8 @@ import scroll from '../assets/scroll2.png'
 const Rulebook = () => {
   return (
     <div className="flex flex-col items-center w-full h-[80vh]">
-      <h1 className='text-5xl mb-5'>RULEBOOK</h1>
-      <img src={scroll} alt="" className='absolute mt-20 '  />
+      <h1 className='text-5xl mb-3'>RULEBOOK</h1>
+      <img src={scroll} alt="" className='absolute mt-16 h-[75vh]'  />
       <div className=" ml-5 overflow-y-auto h-[380px] w-[490px] mt-28 text-black z-10">
       <h1 className=' text-black z-10 text-2xl w-[490px] text-left mb-3'>○ The game consists of three levels.</h1>
       <h1 className=' text-black z-10 text-2xl w-[490px] text-left mb-3'>○ In level 1, every correct answer makes the team earn +100 points, and usage of hint will result in loss of -30 points</h1>

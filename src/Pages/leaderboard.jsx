@@ -53,7 +53,7 @@ export default function Leaderboard() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-screen my-4">
+    <div className="flex flex-col items-center w-full h-[150vh] my-4 ">
       <h1 className="text-5xl mb-5">Leaderboard</h1>
      
       <h1 className="ml-36 mt-8 text-2xl">{leaderboard[0]?.N}</h1>
@@ -92,9 +92,11 @@ export default function Leaderboard() {
             ))}
           </tbody>
         </table>
+        <div className="flex w-full justify-center h-14">
+      <Pagination  numberOfPages={Math.ceil(leaderboard.length / teamsPerPage)} currentPage={currentPage} onPageChange={paginate} />
+      </div>
       </div>
 
-      <Pagination numberOfPages={Math.ceil(leaderboard.length / teamsPerPage)} currentPage={currentPage} onPageChange={paginate} />
 
 
     </div>
