@@ -9,7 +9,7 @@ import char3 from '../assets/char3.png';
 import text from '../assets/text.png';
 // Don't Remove for images for members
 
-import '../css/Members.css';
+import '../Css/Members.css';
 
 const members = [
   { img: char1 },

@@ -112,7 +112,7 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
 
-import "../css/Login.css";
+import "../Css/Login.css";
 import text from "../assets/text.png";
 import logo from "../assets/logo.png";
 import char from "../assets/char.png";

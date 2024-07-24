@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import leader from "../assets/leader.png";
-import "../css/Leader.css";
+import "../Css/Leader.css";
 
 export default function Leaderboard() {
     const [leaderboard , setLeaderboard] = useState([]);  
