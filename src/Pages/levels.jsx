@@ -25,9 +25,7 @@ const Levels = () => {
         SessionID: sesId
       });
       console.log(response.data);
-      if(response.data.error){
-        toaster.error(response.data.error);
-      }
+      
     } catch (e) {
       console.error("Error fetching data:", e);
     }
@@ -66,7 +64,7 @@ const Levels = () => {
             </div>
             <div
               className="w-[340px] h-[200px] bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0"
-            //   onClick={() => handleClick(3)}
+              onClick={() => handleClick(3)}
             >
               <img src={test} alt='level4' className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0" />
             </div>

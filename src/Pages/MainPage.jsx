@@ -1,5 +1,3 @@
-
-
 import text from '../assets/text.png';
 import Coverpage from '../Components/Coverpage';
 import HeroSection from '../Components/HeroSection';
