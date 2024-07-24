@@ -23,8 +23,7 @@
 // }
 
 import React, { useState } from 'react';
-import test from '../assets/bg2.jpg'
-import { games } from "../Config/gdConfig"
+import test from '../assets/bg2.jpg';
 import { useNavigate } from "react-router-dom";
 
 const LevelSelect = () => {
