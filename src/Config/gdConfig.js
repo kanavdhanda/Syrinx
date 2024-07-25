@@ -10,7 +10,7 @@ const games = [
     focusCanvas: true,
     gdextensionLibs: [],
     serviceWorker: "level-1.service.worker.js",
-    mainPack:"https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-1/level-1.pck",
+    // mainPack:"https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-1/level-1.pck",
   },
   // {
   //   name: "Level 2",
