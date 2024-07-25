@@ -40,6 +40,12 @@ export default function Level() {
     // } else if (e.key === "Enter") {
     //   navigate(menuItems[hoverIndex].path);}
   }};
+  useEffect(() => {
+    console.log('GdLoader mounted');
+    return () => {
+      console.log('GdLoader unmounted');
+    };
+  }, []);
   const handleLogout = () => {  
     Cookies.remove('token');
         navigate('/');
