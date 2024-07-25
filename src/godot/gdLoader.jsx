@@ -202,6 +202,8 @@ export default function GdLoader(props){
             <canvas 
                 ref={canvasRef} 
                 id="canvas" 
+
+                style={{ display: 'block' }} // This ensures no extra space around the canvas
             >
                 HTML5 canvas appears to be unsupported in the current browser.<br />
                 Please try updating or use a different browser.
