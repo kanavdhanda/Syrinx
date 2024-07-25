@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { FaLock } from "react-icons/fa";
+import { toast } from "react-toastify";
+
 import "../Css/blur.css"
+
 
 const Levels = () => {
   const [isActive, setIsActive] = useState([true, false, false]);
-  
   const navigate = useNavigate();
 
   const handleClick = (index) => {
@@ -27,16 +29,39 @@ const Levels = () => {
         {
         SessionID: sesId
       });
-      console.log(response.data);
-      
+      return response.data;
+
     } catch (e) {
-      console.error("Error fetching data:", e);
+      toast.error("Error fetching data:", e.response.data.error);
     }
   }
-  useEffect(() => {
-    dataLao();
-  },[])
 
+  useEffect(() => {
+    const datasetting = async()=>{
+      const data=await dataLao();
+    if(data.L){
+      switch(data.L){
+        case 1:
+          setIsActive([true,false,false]);
+          break;
+        case 2:
+          setIsActive([false,true,false]);
+          break;
+        case 3:
+          setIsActive([false,false,true]);
+          break;
+        default:
+          break;
+      }
+    }
+    }
+    datasetting();
+    
+  }, []);
+
+  const handleempty=()=>{
+    return;
+  }
   return (
     // <>
     //   <div className='mt-20 text-5xl'>
@@ -81,12 +106,12 @@ const Levels = () => {
 
 
     <>
-      <div className='mt-[20px] text-6xl'>
+      <div className='mt-[20px] text-6xl w-full text-center'>
          Select Level
       </div>
       <div className='flex w-full h-[70vh] justify-center items-center'>
         <div className='flex mt-[-13vh] gap-[4vw] '>
-          <div className=' h-[40vh] relative w-[18vw] border-[2px] hover:border-white border-black mt-6 bg-green-500 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200' >
+          <div onClick={() => isActive[0]?handleClick(0):handleempty} className=' h-[40vh] relative w-[18vw] border-[2px] hover:border-white border-black mt-6 bg-green-500 rounded-2xl hover:scale-105 transition-all duration-200 hover:cursor-pointer' >
             <img src={test} alt='level2' className="w-full h-full object-cover rounded-2xl" />
             <div className='bg-center absolute inset-0 bg-cover text-3xl text-zinc-900  font-semibold'>
             <div className='relative'>
@@ -94,13 +119,13 @@ const Levels = () => {
             </div>
             </div>
           <div className='bg-slate-500  absolute bottom-5 right-5 border border-white px-2 rounded-md py-1 '>
-            <button onClick={() => handleClick(0)}>Play
-            {!isActive(0) && <FaLock />}
+            <button >Play
+            {!isActive[0] && <FaLock />}
                </button>
           </div>
           </div>
-          <div className=' h-[40vh] bottom-[-20vh] relative w-[18vw] border-[2px] hover:border-white border-black  bg-green-500 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200' >
-            <div className='relative'>
+          <div onClick={() =>isActive[1]?handleClick(1):handleempty} className=' h-[40vh] bottom-[-20vh] relative w-[18vw] border-[2px] hover:border-white border-black  bg-green-500 rounded-2xl grayscale hover:scale-105 transition-all duration-200 hover:cursor-not-allowed' >
+            <div className='relative' >
           <img src={test} alt='level2' className="w-full fixed h-full object-cover rounded-2xl" />
           <div className='bg-center absolute inset-0 bg-cover text-3xl text-zinc-900  font-semibold'>
             <div className='relative'>
@@ -109,10 +134,10 @@ const Levels = () => {
             </div>
             </div>
           <div className='bg-slate-500  absolute bottom-5 right-5 border border-white px-2 rounded-md py-1 '>
-            <button onClick={() => handleClick(0)}>Play {!isActive(1) && <FaLock />}</button>
+            <button >Play {!isActive[1] && <FaLock />}</button>
           </div>
           </div>
-          <div className='h-[40vh] w-[18vw] relative border-[2px] hover:border-white border-black bg-green-500 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200'>
+          <div onClick={() => isActive[2]?handleClick(2):handleempty} className='h-[40vh] w-[18vw] relative border-[2px] hover:border-white border-black bg-green-500 rounded-2xl grayscale hover:scale-105 transition-all duration-200 hover:cursor-not-allowed' >
           <img src={test} alt='level2' className="w-full h-full object-cover rounded-2xl" />
           <div className='bg-center absolute inset-0 bg-cover text-3xl text-zinc-900  font-semibold'>
             <div className='relative'>
@@ -120,7 +145,7 @@ const Levels = () => {
             </div>
             </div>
           <div className='bg-slate-500  absolute bottom-5 right-5 border border-white px-2 rounded-md py-1 '>
-            <button onClick={() => handleClick(0)}>Play {!isActive(2) && <FaLock />}</button>
+            <button >Play {!isActive[2] && <FaLock />}</button>
           </div>
           </div>
         </div>

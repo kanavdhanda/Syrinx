@@ -41,14 +41,12 @@ const Members = () => {
         {
         SessionID: sesId
       });
-      console.log(response.data);
       setTeam(response.data);
       Images();
     } catch (e) {
       toast.error("Error fetching data:", e.response.data.error);
     }
   }
-
   React.useEffect(() => {
     dataLao();
   }, []);
@@ -120,6 +118,8 @@ const Members = () => {
       <div className="flex flex-col w-full items-center justify-center">
         <img src={text} alt="" className="w-[550px]" />
         <div className="text-4xl mt-5">Team: {team.N}</div>
+        <div className="text-4xl mt-5">Team Score: {team.P}</div>
+
       </div>
       <div className="members-container">
         {renderMembers()}

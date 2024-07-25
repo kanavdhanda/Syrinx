@@ -16,7 +16,6 @@ export default function PrivateRoute({ children }) {
                 SessionID: sesId
             });
 
-            console.log(response.data.error);
             return response.data;
         } catch (e) {
             console.error("Error fetching data:", e);
