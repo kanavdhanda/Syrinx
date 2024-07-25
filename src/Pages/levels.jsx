@@ -43,13 +43,13 @@ const Levels = () => {
         <div className="flex gap-5">
           <div className="flex-col flex gap-5">
             <div
-              className="w-[320px] h-[200px] mt-6 bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0"
+              className="w-[320px] h-[200px] mt-6 bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200"
               onClick={() => handleClick(0)}
             >
               <img src={test} alt='level1' className="w-full h-full object-cover rounded-2xl" />
             </div>
             <div
-              className="w-[300px] h-[200px] ml-6 bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0"
+              className="w-[300px] h-[200px] ml-6 bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200"
               onClick={() => handleClick(1)}
             >
               <img src={test} alt='level2' className="w-full h-full object-cover rounded-2xl" />
@@ -57,13 +57,13 @@ const Levels = () => {
           </div>
           <div className="flex-col flex gap-5">
             <div
-              className="w-[300px] h-[200px] bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0"
+              className="w-[300px] h-[200px] bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200"
               onClick={() => handleClick(2)}
             >
               <img src={test} alt='level3' className="w-full h-full object-cover rounded-2xl" />
             </div>
             <div
-              className="w-[340px] h-[200px] bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0"
+              className="w-[340px] h-[200px] bg-green-500 border-2 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200"
               onClick={() => handleClick(3)}
             >
               <img src={test} alt='level4' className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0" />

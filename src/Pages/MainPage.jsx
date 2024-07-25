@@ -1,8 +1,9 @@
-// import text from '../assets/text.png';
+import text from '../assets/text.png';
 import Coverpage from '../Components/Coverpage';
 import HeroSection from '../Components/HeroSection';
 import SponserArea from '../Components/SponserArea';
 import '../Css/mainpage.css'
+import '../Css/GamingButton.css'
 import Login from './Login';
 
 
@@ -34,7 +35,7 @@ export default function MainPage() {
         {/* </div> */}
         <div className='h-[70vh] flex flex-col justify-center items-center'>
           <p className='font-bold text-4xl mb-4'>Are you ready to begin the adventure?</p>
-          <a href="/login" className='bg-green-500 text-black hover:bg-green-600 hover:text-white py-2 px-4 rounded-md w-1/3'>Lets begin</a>
+          <a href="/login" className='gaming-button w-1/3 '>Lets begin</a>
         </div>
         </div>
       </div>

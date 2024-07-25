@@ -21,6 +21,5 @@ export default function Level() {
 
   return (
       <GdLoader gdConfig={games[gameId]} />
-
   );
 }
