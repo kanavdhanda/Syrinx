@@ -11,7 +11,6 @@ import Members from "./Pages/Members"
 import Navbar from "./Components/Navbar"
 import Rulebook from "./Pages/Rulebook"
 import MainPage from "./Pages/MainPage"
-import LevelSelect from "./Pages/LevelSelect"
 import Coverpage from "./Components/Coverpage"
 // import PauseMenu from "./Components/PauseMenu"
 import { ToastContainer } from 'react-toastify';
@@ -31,7 +30,7 @@ function App() {
           <Route path="/" element={<Coverpage />} />
           <Route path="/" element={<Login />} />
 
-          <Route path="/levelselect" element={<LevelSelect />} />
+          
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
           <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />

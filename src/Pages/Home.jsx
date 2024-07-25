@@ -11,7 +11,7 @@ const menuItems = [
   { name: "RULEBOOK", path: "/rulebook" },
   { name: "LEADERBOARD", path: "/leaderboard" },
   { name: "MEMBERS", path: "/members" },
-  {name:"LOGOUT",path:"/"}
+  { name: "LOGOUT",   path:"/"}
 ];
 
 export default function Home() {
@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center bg-black w-full h-screen text-white">
+     <div className="flex flex-col items-center justify-center bg-black w-full h-screen text-white">
         <div>
         <img src={text} alt="" className="mb-10" />
         <div className="flex items-left justify-center space-y-4 text-xl">
