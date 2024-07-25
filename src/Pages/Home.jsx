@@ -76,7 +76,6 @@ export default function Home() {
             <p>CREATIVE COMPUTING SOCIETY</p>
           </div>
         </div>
-      </div>
     </>
   );
 }
