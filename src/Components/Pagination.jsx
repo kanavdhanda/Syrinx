@@ -36,12 +36,12 @@ export default function Pagination({ numberOfPages, currentPage, onPageChange })
   createPageNumbers();
 
   return (
-    <div className="flex flex-row space-x-2 my-4 h-full">
+    <div className="flex flex-row gap-2 mt-8 mb-4 h-full">
       {pageNumbers.map((number, index) => (
         <button
           key={index}
           onClick={() => number !== '...' && onPageChange(number)}
-          className={`pixelated-btn px-6 py-3 text-lg ${
+          className={`pixelated-btn px-4 py-1 text-lg rounded-md ${
             number === currentPage ? 'bg-green-700 text-white' : 'bg-green-500 text-black hover:bg-green-600 hover:text-white'
           }`}
           disabled={number === '...'}

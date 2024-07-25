@@ -3,6 +3,7 @@ import Coverpage from '../Components/Coverpage';
 import HeroSection from '../Components/HeroSection';
 import SponserArea from '../Components/SponserArea';
 import '../Css/mainpage.css'
+import Login from './Login';
 
 
 export default function MainPage() {
@@ -28,7 +29,8 @@ export default function MainPage() {
             </div>
             <div className="w-30px mt-[23vh] random-flicker flex-col" id='Register' >
             <div className="bggrad456 z-100 h-[20vh] "></div>
-              <Coverpage/>
+              {/* <Coverpage/> */}
+              <Login />
         </div>
         </div>
       </div>
