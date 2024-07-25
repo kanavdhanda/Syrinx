@@ -15,7 +15,7 @@ export default function MainPage() {
           <div className="bggrad123 z-10 h-[30vh] "></div>
           <HeroSection  className="hero-section"/>
           <div className='h-[50vh] flex flex-col justify-center items-center'>
-          <p className='font-bold mb-4 text-5xl'>Are you ready to begin the adventure?</p>
+          <p className='font-bold mb-6 text-5xl'>Ready to begin the adventure?</p>
           {/* <a href="/login" className='gaming-button w-1/3 '>Lets begin</a>
            */}
            <GamingButton text='Start' link='/login' className="w-full"/>
