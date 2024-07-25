@@ -15,7 +15,7 @@ const games = [
     name: "level-1",
     args: [],
     canvasResizePolicy: 2,
-    executable: "/level-1/level-1",
+    executable: "level-1",
     experimentalVK: true,
     fileSizes: { "level-1.pck": 24219360, "level-1": 1758196 },
     focusCanvas: true,
