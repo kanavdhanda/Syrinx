@@ -53,12 +53,12 @@ export default function Level() {
     <div className="relative w-full h-full">
          {/* Change the text to button and style it */}
 
-      <button
+      {/* <button
         className="absolute bg-red-300 p-10 top-0 left-0 z-50"
         onClick={() => setIsPaused(!isPaused)}
       >
         Pause
-      </button>
+      </button> */}
       <div
         className="absolute z-10"
       >

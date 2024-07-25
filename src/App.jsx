@@ -27,8 +27,8 @@ function App() {
         <Routes>
           
           <Route path="/" element={<MainPage />} />
-          <Route path="/" element={<Coverpage />} />
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Coverpage />} /> */}
+          <Route path="/login" element={<Login />} />
 
           
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />

@@ -45,7 +45,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center bg-black w-full h-[100vh] text-white">
+      <div className="flex flex-col items-center justify-center bg-black w-full h-[80vh] text-white">
+        <div className="flex flex-col items-center justify-center w-[50vh]">
         <img src={text} alt="" className="mb-10" />
         <div className="flex items-left justify-center space-y-4 text-xl">
           <div className="home_page_grid">
@@ -68,6 +69,7 @@ export default function Home() {
           <div className="ml-10">
             <img src={char} alt="" className="h-64" />
           </div>
+        </div>
         </div>
         </div>
         <div className="flex items-center justify-center text-center text-xl">
