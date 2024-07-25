@@ -1,4 +1,4 @@
-import React from 'react';
+
 import scroll from '../assets/scroll2.png';
 
 const Rulebook = () => {
@@ -21,6 +21,8 @@ const Rulebook = () => {
           <h1 className='text-2xl text-left mb-3'>○ Hints will be provided to ease question difficulties.</h1>
           <h1 className='text-2xl text-left mb-3'>○ A leaderboard will display the progress of the teams for each level.</h1>
           <h1 className='text-2xl text-left mb-3'>○ In case of a tie between teams due to the same scores, the team that took less time to solve the questions will proceed.</h1>
+          <h1 className='text-2xl text-left mb-3'>○ If the question starts starts with Error with a capital "E" then it is an error please report it to an admin!</h1>
+          <h1 className='text-2xl text-left mb-3'>○ The decision of the admin will be final and binding.</h1>
         </div>
       </div>
     </div>

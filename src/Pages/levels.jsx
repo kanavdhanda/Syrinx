@@ -7,7 +7,8 @@ import { FaLock } from "react-icons/fa";
 import "../Css/blur.css"
 
 const Levels = () => {
-  const [isActive, setIsActive] = useState([false, false, false]);
+  const [isActive, setIsActive] = useState([true, false, false]);
+  
   const navigate = useNavigate();
 
   const handleClick = (index) => {
@@ -93,7 +94,9 @@ const Levels = () => {
             </div>
             </div>
           <div className='bg-slate-500  absolute bottom-5 right-5 border border-white px-2 rounded-md py-1 '>
-            <button onClick={() => handleClick(0)}>Play <FaLock/></button>
+            <button onClick={() => handleClick(0)}>Play
+            {!isActive(0) && <FaLock />}
+               </button>
           </div>
           </div>
           <div className=' h-[40vh] bottom-[-20vh] relative w-[18vw] border-[2px] hover:border-white border-black  bg-green-500 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200' >
@@ -106,7 +109,7 @@ const Levels = () => {
             </div>
             </div>
           <div className='bg-slate-500  absolute bottom-5 right-5 border border-white px-2 rounded-md py-1 '>
-            <button onClick={() => handleClick(0)}>Play <FaLock/></button>
+            <button onClick={() => handleClick(0)}>Play {!isActive(1) && <FaLock />}</button>
           </div>
           </div>
           <div className='h-[40vh] w-[18vw] relative border-[2px] hover:border-white border-black bg-green-500 rounded-2xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-200'>
@@ -117,7 +120,7 @@ const Levels = () => {
             </div>
             </div>
           <div className='bg-slate-500  absolute bottom-5 right-5 border border-white px-2 rounded-md py-1 '>
-            <button onClick={() => handleClick(0)}>Play <FaLock/></button>
+            <button onClick={() => handleClick(0)}>Play {!isActive(2) && <FaLock />}</button>
           </div>
           </div>
         </div>
