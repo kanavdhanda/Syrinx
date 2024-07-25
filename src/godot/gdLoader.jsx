@@ -14,6 +14,7 @@ export default function GdLoader(props){
     useEffect(() => {  
         if(firstLoad)
         {
+            console.log("First Load")
     const GODOT_CONFIG = props.gdConfig;
     // GODOT_CONFIG.preloadedFiles = {
     //     [`/${GODOT_CONFIG.executable}.pck`]: preloadedPckFile,
