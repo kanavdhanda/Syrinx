@@ -18,6 +18,7 @@ export default function Login() {
   });
   const [error, setError] = useState("");
 
+
   const sanitizeInput = (input) => {
     return DOMPurify.sanitize(input);
   };
