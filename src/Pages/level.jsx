@@ -1,4 +1,4 @@
-import  { Fragment,useState,useEffect } from "react";
+import  { Fragment,useState,useEffect,useMemo } from "react";
 import GdLoader from "../godot/gdLoader";
 import { useParams , useNavigate, Link} from "react-router-dom";
 import { games } from "../Config/gdConfig";
@@ -10,6 +10,7 @@ import text from "../assets/text.png";
 import logo from "../assets/logo.png";
 
 export default function Level() {
+  const gdConfig = useMemo(() => games[gameId], [gameId]);
   // const menuItems = [
   //   { name: "RESUME", path: "/lvls" },
   //   { name: "RULEBOOK", path: "/rulebook" },
