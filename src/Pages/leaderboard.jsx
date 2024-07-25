@@ -9,7 +9,7 @@ export default function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [teamsPerPage] = useState(15);
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
 
   const dataLao = async () => {
     if (leaderboard.length === 0) {
@@ -42,15 +42,15 @@ export default function Leaderboard() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   // Search functionality
-  const handleSearch = () => {
-    const teamIndex = leaderboard.findIndex((team) => team.N.toLowerCase().includes(searchQuery.toLowerCase()));
-    if (teamIndex !== -1) {
-      const page = Math.ceil((teamIndex + 1) / teamsPerPage);
-      setCurrentPage(page);
-    } else {
-      toast.error("Team not found");
-    }
-  };
+  // const handleSearch = () => {
+  //   const teamIndex = leaderboard.findIndex((team) => team.N.toLowerCase().includes(searchQuery.toLowerCase()));
+  //   if (teamIndex !== -1) {
+  //     const page = Math.ceil((teamIndex + 1) / teamsPerPage);
+  //     setCurrentPage(page);
+  //   } else {
+  //     toast.error("Team not found");
+  //   }
+  // };
 
   return (
     <div className="flex flex-col items-center w-full min-h-[150vh] my-4 ">
@@ -96,9 +96,6 @@ export default function Leaderboard() {
       <Pagination  numberOfPages={Math.ceil(leaderboard.length / teamsPerPage)} currentPage={currentPage} onPageChange={paginate} />
       </div>
       </div>
-
-
-
     </div>
   );
 }
