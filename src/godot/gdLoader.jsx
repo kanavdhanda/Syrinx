@@ -1,4 +1,4 @@
-import {useEffect , useRef} from 'react';
+import {useEffect , useRef, useMemo } from 'react';
 import './godot.css'
 
 export default function GdLoader(props){
@@ -9,7 +9,7 @@ export default function GdLoader(props){
     const statusIndeterminateRef = useRef(null);
     const statusNoticeRef = useRef(null);
     // const engineRef = useRef(null);
-
+    const gdConfig = useMemo(() => games[gameId], [gameId]);
     
     useEffect(() => {  
     const GODOT_CONFIG = props.gdConfig;
