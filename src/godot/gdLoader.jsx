@@ -1,4 +1,4 @@
-import {useEffect , useRef} from 'react';
+import {useEffect ,useState, useRef,useMemo} from 'react';
 import './godot.css'
 
 export default function GdLoader(props){
@@ -9,9 +9,11 @@ export default function GdLoader(props){
     const statusIndeterminateRef = useRef(null);
     const statusNoticeRef = useRef(null);
     // const engineRef = useRef(null);
-
+    const [firstLoad,setFirstLoad]=useState(true);
     
     useEffect(() => {  
+        if(firstLoad)
+        {
     const GODOT_CONFIG = props.gdConfig;
     // GODOT_CONFIG.preloadedFiles = {
     //     [`/${GODOT_CONFIG.executable}.pck`]: preloadedPckFile,
@@ -191,6 +193,9 @@ export default function GdLoader(props){
                 engineRef.current = null;
             }
         };
+        setFirstLoad(false);
+    }
+
     }, []);
     
 
