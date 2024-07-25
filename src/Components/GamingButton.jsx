@@ -1,5 +1,5 @@
 
-import './GamingButton.css';
+import '../Css/GamingButton.css';
 
 const GamingButton = ({ text, onClick }) => {
   return (
