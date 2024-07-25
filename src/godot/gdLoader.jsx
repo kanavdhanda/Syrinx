@@ -184,13 +184,13 @@ export default function GdLoader(props){
             });
         }
 
-        // return () => {
-        //     if (engineRef.current) {
-        //         console.log('Cleaning up Godot engine');
-        //         engineRef.current.quit();
-        //         engineRef.current = null;
-        //     }
-        // };
+        return () => {
+            if (engineRef.current) {
+                console.log('Cleaning up Godot engine');
+                engineRef.current.quit();
+                engineRef.current = null;
+            }
+        };
     }, []);
     
 
