@@ -10,7 +10,7 @@ import text from "../assets/text.png";
 import logo from "../assets/logo.png";
 
 export default function Level() {
-  const gdConfig = useMemo(() => games[gameId], [gameId]);
+
   // const menuItems = [
   //   { name: "RESUME", path: "/lvls" },
   //   { name: "RULEBOOK", path: "/rulebook" },
@@ -27,6 +27,7 @@ export default function Level() {
   ];
   let { id } = useParams();
   let gameId = parseInt(id, 10);
+  const gdConfig = useMemo(() => games[gameId], [gameId]);
   const [isPaused, setIsPaused] = useState(false);
   const navigate = useNavigate();
   const [hoverIndex, setHoveredIndex] = useState(0);
