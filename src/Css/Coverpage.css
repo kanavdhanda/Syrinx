@@ -39,7 +39,7 @@ html, body{
     top: 0%;
     width: 100%;
     height: 50vh;
-    background: linear-gradient(rgb(30, 148, 97),rgb(88, 180, 63));
+    background: linear-gradient(#0d0d0d 30%, #96b352);
     z-index: 9;
     overflow: hidden;
 }
@@ -61,7 +61,7 @@ html, body{
     bottom: 0;
     width: 100%;
     height: 50vh;
-    background: linear-gradient(rgb(88, 180, 63), rgb(88, 180, 63));
+    background: linear-gradient(#96b352,black 70%);
     /* background-color: rgb(126, 247, 92); */
     overflow: hidden;
 }
