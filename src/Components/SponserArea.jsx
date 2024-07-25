@@ -51,33 +51,34 @@ const SponserArea = () => {
 
   return (
     <div className='flex flex-col gap-10 justify-center items-center w-full'>
+      <p className='text-6xl'>Sponsors</p>
       <div className="grid grid-cols-3 gap-10 w-full">
         {sponsors.slice(0, 3).map((sponsor, index) => (
           <div key={index} className="relative bg-gray-500 border-2 h-[200px] rounded-xl flex justify-center items-center w-full group">
-            <img className='w-[300px] px-3 transition-opacity duration-500 opacity-100 group-hover:opacity-0' src={sponsor.img} alt="" />
-            <div className="absolute inset-0 flex justify-center items-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <img className='w-[300px] px-3 transition-opacity duration-500 opacity-100' src={sponsor.img} alt="" />
+            {/* <div className="absolute inset-0 flex justify-center items-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               {sponsor.description}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
       <div className="grid grid-cols-3 gap-10 w-full">
         {sponsors.slice(3, 6).map((sponsor, index) => (
           <div key={index} className="relative bg-gray-500 border-2 h-[200px] rounded-xl flex justify-center items-center w-full group">
-            <img className='w-[300px] px-3 transition-opacity duration-500 opacity-100 group-hover:opacity-0' src={sponsor.img} alt="" />
-            <div className="absolute inset-0 flex justify-center items-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <img className='w-[300px] px-3 transition-opacity duration-500 opacity-100' src={sponsor.img} alt="" />
+            {/* <div className="absolute inset-0 flex justify-center items-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               {sponsor.description}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
       <div className="grid grid-cols-3 gap-10 w-full">
         {sponsors.slice(6).map((sponsor, index) => (
           <div key={index} className="relative bg-gray-500 border-2 h-[200px] rounded-xl flex justify-center items-center w-full group">
-            <img className='w-[300px] px-3 transition-opacity duration-500 opacity-100 group-hover:opacity-0' src={sponsor.img} alt="" />
-            <div className="absolute inset-0 flex justify-center items-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <img className='w-[300px] px-3 transition-opacity duration-500 opacity-100' src={sponsor.img} alt="" />
+            {/* <div className="absolute inset-0 flex justify-center items-center text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               {sponsor.description}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
