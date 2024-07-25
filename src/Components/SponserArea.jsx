@@ -50,7 +50,7 @@ const SponserArea = () => {
 
   return (
     <div className='flex flex-col gap-10 justify-center items-center w-full'>
-      <p className='text-6xl'>Our Sponsors</p>
+      <p className='text-6xl mb-7'>Our Sponsors</p>
       <div className="grid grid-cols-3 gap-10 w-full">
         {sponsors.map((sponsor, index) => (
           <div key={index} className="relative bg-gray-500 border-2 h-[200px] rounded-xl flex justify-center items-center w-full group">

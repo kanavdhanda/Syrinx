@@ -4,7 +4,7 @@ import background from '../assets/bg2.jpg';
 import text from '../assets/text.png';
 import ccs from '../assets/ccs.png';
 import '../Css/hero.css'
-
+import GamingButton from './GamingButton';
 const HeroSection = () => {
 
   return (
