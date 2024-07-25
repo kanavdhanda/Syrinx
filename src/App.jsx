@@ -27,10 +27,8 @@ function App() {
         <Routes>
           
           <Route path="/" element={<MainPage />} />
-          {/* <Route path="/" element={<Coverpage />} /> */}
           <Route path="/login" element={<Login />} />
 
-          
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/lvls" element={<PrivateRoute><Navbar /><Levels /></PrivateRoute>} />    
           <Route path="/lvls/:id" element={<PrivateRoute><Level /></PrivateRoute>} />
@@ -39,7 +37,12 @@ function App() {
           <Route path="/members" element={<PrivateRoute><Navbar /><Members /></PrivateRoute>}></Route>
 
 
-          <Route path="*" element={<h1>Not Found</h1>} />
+          <Route path="*" element={<div className="h-screen flex flex-col justify-center items-center">
+            <h1 className="text-4xl mb-4">Page Not Found</h1>
+            <a href="/" className="">
+              Go to Home Page
+            </a>
+            </div>} />
           
           
         </Routes>

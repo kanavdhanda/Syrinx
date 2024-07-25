@@ -13,7 +13,6 @@ export const GodotEngineProvider = ({ children }) => {
 
   const deleteEngine = () => {
     if (engine) {
-      engine.quit();
       setEngine(null);
     }
   };

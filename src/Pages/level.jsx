@@ -30,25 +30,25 @@ export default function Level() {
   const navigate = useNavigate();
   const [hoverIndex, setHoveredIndex] = useState(0);
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Escape") {
-      setIsPaused(!isPaused);
-    // } else if (e.key === "ArrowDown") {
-    //   setHoveredIndex((prevIndex) => (prevIndex < menuItems.length - 1 ? prevIndex + 1 : 0));
-    // } else if (e.key === "Enter") {
-    //   navigate(menuItems[hoverIndex].path);}
-  }};
+  // const handleKeyDown = (e) => {
+  //   if (e.key === "Escape") {
+  //     setIsPaused(!isPaused);
+  //   // } else if (e.key === "ArrowDown") {
+  //   //   setHoveredIndex((prevIndex) => (prevIndex < menuItems.length - 1 ? prevIndex + 1 : 0));
+  //   // } else if (e.key === "Enter") {
+  //   //   navigate(menuItems[hoverIndex].path);}
+  // }};
   const handleLogout = () => {  
     Cookies.remove('token');
         navigate('/');
   }
 
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [hoverIndex]);
+  // useEffect(() => {
+  //   window.addEventListener("keydown", handleKeyDown);
+  //   return () => {
+  //     window.removeEventListener("keydown", handleKeyDown);
+  //   };
+  // }, [hoverIndex]);
   return (
     <div className="relative w-full h-full">
          {/* Change the text to button and style it */}
