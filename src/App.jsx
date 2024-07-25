@@ -19,7 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
 
-  // TODO: Revert back Auth.js to original code(remove always true part)
+  // TODO: Revert back Level(private route)
   return (
     <>
         <Router>
