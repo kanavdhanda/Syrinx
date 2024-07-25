@@ -3,10 +3,10 @@ import SponserArea from '../Components/SponserArea';
 import '../Css/mainpage.css'
 import '../Css/GamingButton.css'
 import GamingButton from '../Components/GamingButton';
-
+import {useNavigate} from 'react-router-dom';
 
 export default function MainPage() {
-
+  const navigate = useNavigate();
   return (
     <div className="crt-screen min-h-screen flex flex-col justify-center items-center" >
       
@@ -18,7 +18,9 @@ export default function MainPage() {
           <p className='font-bold mb-6 text-5xl'>Ready to begin the adventure?</p>
           {/* <a href="/login" className='gaming-button w-1/3 '>Lets begin</a>
            */}
-           <GamingButton text='Start' link='/login' className="w-full"/>
+           <GamingButton text='Start' className="w-full" onClick={()=>{
+            navigate('/login');
+          }}/>
         </div>
         </div>
         <div className="crt-content">
