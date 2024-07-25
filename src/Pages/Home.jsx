@@ -7,7 +7,7 @@ import text from "../assets/text.png";
 import logo from "../assets/logo.png";
 
 const menuItems = [
-  { name: "PLAY GAME", path: "/lvls" },
+  { name: "PLAY GAME", path: "/level" },
   { name: "RULEBOOK", path: "/rulebook" },
   { name: "LEADERBOARD", path: "/leaderboard" },
   { name: "MEMBERS", path: "/members" },

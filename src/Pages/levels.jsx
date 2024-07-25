@@ -12,7 +12,7 @@ const Levels = () => {
     // const newSelectedLevels = [...selectedLevels];
     // newSelectedLevels[index] = !newSelectedLevels[index];
     // setSelectedLevels(newSelectedLevels);
-    navigate("/lvls/" + index);
+    navigate("/level/" + index);
   };
   
   const dataLao = async() => {
