@@ -29,7 +29,7 @@ export default function Leaderboard() {
     dataLao();
     const interval = setInterval(() => {
       dataLao();
-    }, 60000);
+    }, 30000);
 
     return () => clearInterval(interval);
   }, []);
