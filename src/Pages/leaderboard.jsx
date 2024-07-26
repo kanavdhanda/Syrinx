@@ -60,17 +60,15 @@ export default function Leaderboard() {
       <img src={leader} alt="" className="h-[250px] absolute mt-[80px] w-[750px]" />
 
       <div className="mt-28 mb-8 bg-[#1f1e1e] py-5 rounded-xl px-5 flex flex-col justify-center w-3/4">
-        <div className="w-full flex justify-end mb-4 ">
-          <div className="flex mr-20">
+          <div className="flex w-full mb-5">
             <input
               type="text"
-              placeholder="Search for your team"
+              placeholder="Search for your team here..."
               value={searchQuery}
               onChange={(e) => handleChange(e)}
-              className="px-3 py-2 border rounded-md text-black"
+              className="px-3 mx-24 py-2 border-white border-2 rounded-md text-white bg-transparent active:border-white focus:border-white active:border-2 focus:border-2 w-full"
             />
           </div>
-        </div>
         <table>
           <thead>
             <tr>
