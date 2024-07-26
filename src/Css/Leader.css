@@ -9,6 +9,7 @@ table {
   
   th {
     font-size: 29px;
+    color: yellow;
     
     padding-bottom: 10px;
   }
@@ -19,15 +20,20 @@ table {
     text-align: center;
     font-size: 24px;
   }
+
   
-  /* tr:nth-child(1) {
+  .first-place {
+
     color: yellow;
+
   }
   
-  tr:nth-child(2) {
+  .second-place {
     color: lightgreen;
+
   }
   
-  tr:nth-child(3) {
+  .third-place {
     color: darkgreen;
-  } */
+  }
+  

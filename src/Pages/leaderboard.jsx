@@ -9,7 +9,7 @@ export default function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [teamsPerPage] = useState(15);
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const dataLao = async () => {
     if (leaderboard.length === 0) {
@@ -34,46 +34,43 @@ export default function Leaderboard() {
     return () => clearInterval(interval);
   }, []);
 
+  // Filter teams based on search query
+  const filteredTeams = leaderboard.filter((team) =>
+    team.N.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   // Pagination logic
   const indexOfLastTeam = currentPage * teamsPerPage;
   const indexOfFirstTeam = indexOfLastTeam - teamsPerPage;
-  const currentTeams = leaderboard.slice(indexOfFirstTeam, indexOfLastTeam);
+  const currentTeams = filteredTeams.slice(indexOfFirstTeam, indexOfLastTeam);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Search functionality
-  // const handleSearch = () => {
-  //   const teamIndex = leaderboard.findIndex((team) => team.N.toLowerCase().includes(searchQuery.toLowerCase()));
-  //   if (teamIndex !== -1) {
-  //     const page = Math.ceil((teamIndex + 1) / teamsPerPage);
-  //     setCurrentPage(page);
-  //   } else {
-  //     toast.error("Team not found");
-  //   }
-  // };
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1); // Reset to the first page after search
+  };
 
   return (
-    <div className="flex flex-col items-center w-full min-h-[150vh] my-4 ">
+    <div className="flex flex-col items-center w-full min-h-[150vh] my-4">
       <h1 className="text-5xl mb-5">Leaderboard</h1>
-     
       <h1 className="ml-28 mt-5 text-2xl">{leaderboard[0]?.N}</h1>
       <h1 className="mt-14 mr-[470px] text-2xl">{leaderboard[1]?.N}</h1>
       <h1 className="mt-5 ml-[520px] text-2xl">{leaderboard[2]?.N}</h1>
       <img src={leader} alt="" className="h-[250px] absolute mt-[80px] w-[750px]" />
 
       <div className="mt-28 mb-8 bg-[#1f1e1e] py-5 rounded-xl px-5 flex flex-col justify-center w-3/4">
-      {/* <div className="flex mb-4">
-        <input
-          type="text"
-          placeholder="Search for your team"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="px-3 py-2 border rounded-l-md text-black"
-        />
-        <button onClick={handleSearch} className="px-4 py-2 bg-blue-500 text-white rounded-r-md">
-          Search
-        </button>
-      </div> */}
+        <div className="w-full flex justify-end mb-4 ">
+          <div className="flex mr-20">
+            <input
+              type="text"
+              placeholder="Search for your team"
+              value={searchQuery}
+              onChange={(e) => handleChange(e)}
+              className="px-3 py-2 border rounded-md text-black"
+            />
+          </div>
+        </div>
         <table>
           <thead>
             <tr>
@@ -83,18 +80,32 @@ export default function Leaderboard() {
             </tr>
           </thead>
           <tbody className="overflow-y-auto h-20">
-            {currentTeams.map((team, index) => (
-              <tr key={index}>
-                <td>{indexOfFirstTeam + index + 1}</td>
-                <td>{team.N}</td>
-                <td>{team.P}</td>
-              </tr>
-            ))}
+            {currentTeams.map((team, index) => {
+              const globalIndex = leaderboard.findIndex((t) => t.N === team.N);
+              return (
+                <tr
+                  key={index}
+                  className={
+                    globalIndex === 0
+                      ? "first-place"
+                      : globalIndex === 1
+                      ? "second-place"
+                      : globalIndex === 2
+                      ? "third-place"
+                      : ""
+                  }
+                >
+                  <td>{indexOfFirstTeam + index + 1}</td>
+                  <td>{team.N}</td>
+                  <td>{team.P}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
         <div className="flex w-full justify-center">
-      <Pagination  numberOfPages={Math.ceil(leaderboard.length / teamsPerPage)} currentPage={currentPage} onPageChange={paginate} />
-      </div>
+          <Pagination numberOfPages={Math.ceil(filteredTeams.length / teamsPerPage)} currentPage={currentPage} onPageChange={paginate} />
+        </div>
       </div>
     </div>
   );

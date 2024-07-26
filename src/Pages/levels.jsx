@@ -45,7 +45,7 @@ const Levels = () => {
           setIsActive([true,false,false]);
           break;
         case 2:
-          setIsActive([false,true,false]);
+          setIsActive([true,true,false]);
           break;
         case 3:
           setIsActive([false,false,true]);
