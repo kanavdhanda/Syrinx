@@ -58,6 +58,9 @@ const Rulebook = () => {
             it is an error please report it to an admin!
           </h1>
           <h1 className="text-2xl text-left mb-3">
+            ○ If caught cheating we hold the abiity to disqualify/deduct points from the team.
+          </h1>
+          <h1 className="text-2xl text-left mb-3">
             ○ The decision of the admin will be final and binding.
           </h1>
         </div>
