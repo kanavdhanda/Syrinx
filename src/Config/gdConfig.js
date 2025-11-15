@@ -34,7 +34,7 @@ const games = [
     focusCanvas: true,
     gdextensionLibs: [],
     serviceWorker: "level-3.service.worker.js",
-    mainPack:"https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-3.pck",
+    mainPack:"/level/level-3.pck",
   },
 ];
 
