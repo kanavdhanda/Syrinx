@@ -91,7 +91,7 @@ const Levels = () => {
             <button>Play {!isActive[1] && <FaLock/>}</button>
           </div>
           </div>
-          <div onClick={() => isActive[2]?handleClick(2):handleempty} className={`h-[40vh] w-[18vw] relative border-[2px] hover:border-white border-black bg-green-500 rounded-2xl ${!isActive[2]?"grayscale hover:cursor-not-allowed":"hover:cursor-pointer"} hover:grayscale-0 hover:scale-105 transition-all duration-200`}>
+          {/* <div onClick={() => isActive[2]?handleClick(2):handleempty} className={`h-[40vh] w-[18vw] relative border-[2px] hover:border-white border-black bg-green-500 rounded-2xl ${!isActive[2]?"grayscale hover:cursor-not-allowed":"hover:cursor-pointer"} hover:grayscale-0 hover:scale-105 transition-all duration-200`}>
           <img src={test} alt='level3' className="w-full h-full object-cover rounded-2xl" />
           <div className='bg-center absolute inset-0 bg-cover text-3xl text-zinc-900  font-semibold'>
             <div className='relative'>
@@ -101,7 +101,7 @@ const Levels = () => {
           <div className='bg-slate-500  absolute bottom-5 right-5 border border-white px-2 rounded-md py-1 '>
             <button >Play {!isActive[2] && <FaLock/>}</button>
           </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
