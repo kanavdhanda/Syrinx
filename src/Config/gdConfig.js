@@ -10,7 +10,7 @@ const games = [
     focusCanvas: true,
     gdextensionLibs: [],
     serviceWorker: "level-1.service.worker.js",
-    mainPack:"https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-1-pakka-final/level-1-pakka.pck",
+    mainPack:"https://syrinx.blr1.cdn.digitaloceanspaces.com/level-1-pakka-final/syrinx_lvl1.pck",
   },
   {
     name: "level-2",
@@ -22,7 +22,7 @@ const games = [
     focusCanvas: true,
     gdextensionLibs: [],
     serviceWorker: "level-2.service.worker.js",
-    mainPack:"https://srinx-ccs.blr1.cdn.digitaloceanspaces.com/level-2.pck",
+    mainPack:"https://syrinx.blr1.cdn.digitaloceanspaces.com/level-2/syrinx_lvl2.pck",
   },
    {
     name: "level-3",
